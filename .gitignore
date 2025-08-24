@@ -40,8 +40,6 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# 配置文件
-raid_config.txt
 
 # 日志文件
 *.log
