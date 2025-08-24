@@ -1,0 +1,16 @@
+# 基础GUI库（Python内置，无需安装）
+# tkinter - Python内置GUI库
+
+# 打包工具
+pyinstaller>=5.0
+
+# 如果需要更高级的GUI功能，可以考虑以下库：
+# PyQt5>=5.15.0
+# wxPython>=4.1.0
+# PySimpleGUI>=4.60.0
+
+# 正则表达式支持（Python内置）
+# re - Python内置正则表达式库
+
+# 类型提示支持（Python 3.5+内置）
+# typing - Python内置类型提示库

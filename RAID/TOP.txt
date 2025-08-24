@@ -1,0 +1,370 @@
+
+### The Omega Protocol
+# -p 7B03:15 7B40:206.4 7B13:400 7B47:600 7B7C:700 7F72:1100
+# -ii 7BFD 7B0A 7E70 7B0C 7B41 7E6B 7B3F 7BFE 7BFF 7B14 7B15 7B16 7B17 7B1C 7B1D 7B1E 7B2B 7B2C 7B39 7B20 7F75 7B36 7B37 7B35 7B43 7B28 7B32 7B23 7B24 7B49 7B4C 7C00  7B5F 7B60 7B5A 7B5B 7B6D 7B56 7B57 7AFB 7EF9 7C01 7B8B 7BAE 7E51 7B7D 7B7E 7B80 7B90 7B74 7C02 7B79 7E76 7B99
+# -it "Omega" "Omega-M" "Omega-F"
+
+hideall "--Reset--"
+hideall "--sync--"
+
+0.0 "--Reset--" ActorControl {"command":"4000000F"} window 0,100000 jump 0
+
+### P1: Beetle
+0.0 "--同步化--" InCombat {"inGameCombat":"1"} window 0,1
+
+11.0 "--同步化--" StartsUsing {"id":"7B03","source":"欧米茄"} window 20,20
+15.0 "循环程序" Ability {"id":"7B03","source":"欧米茄"}
+21.0 "--同步化--" StartsUsing {"id":"7B07","source":"欧米茄"}
+29.0 "--同步化--" Ability {"id":"7B07","source":"欧米茄"}
+29.1 "清除记忆污染S 1" Ability {"id":"7B04","source":"欧米茄"}
+29.1 "冲击波 1" Ability {"id":"7B08","source":"欧米茄"}
+38.1 "清除记忆污染S 2" Ability {"id":"7B04","source":"欧米茄"}
+38.1 "冲击波 2" Ability {"id":"7B08","source":"欧米茄"}
+47.1 "清除记忆污染S 3" Ability {"id":"7B04","source":"欧米茄"}
+47.1 "冲击波 3" Ability {"id":"7B08","source":"欧米茄"}
+56.1 "清除记忆污染S 4" Ability {"id":"7B04","source":"欧米茄"}
+56.1 "冲击波 4" Ability {"id":"7B09","source":"欧米茄"}
+
+64.2 "--同步化--" StartsUsing {"id":"7B0B","source":"欧米茄"} window 20,20
+69.2 "全能之主" Ability {"id":"7B0B","source":"欧米茄"}
+75.3 "火炎放射" Ability {"id":"7B0D","source":"欧米茄"} duration 25.6
+81.3 "大功率波动炮P 1" Ability {"id":"7B0F","source":"欧米茄"}
+81.3 "跟踪导弹P 1" Ability {"id":"7B0E","source":"欧米茄"}
+87.3 "大功率波动炮P 2" Ability {"id":"7B0F","source":"欧米茄"}
+87.3 "跟踪导弹P 2" Ability {"id":"7B0E","source":"欧米茄"}
+93.3 "大功率波动炮P 3" Ability {"id":"7B0F","source":"欧米茄"}
+93.3 "跟踪导弹P 3" Ability {"id":"7B0E","source":"欧米茄"}
+99.3 "大功率波动炮P 4" Ability {"id":"7B0F","source":"欧米茄"}
+99.3 "跟踪导弹P 4" Ability {"id":"7B0E","source":"欧米茄"}
+
+108.0 "扩散波动炮P x5" duration 8 #Ability { id: "7B10", source: "Omega" }
+108.0 "波动炮P 1" Ability {"id":"7B11","source":"欧米茄"}
+116.8 "波动炮P 2" Ability {"id":"7B11","source":"欧米茄"}
+
+122.7 "--同步化--" StartsUsing {"id":"7AF8","source":"欧米茄"} window 20,20
+127.7 "原子射线 狂暴" Ability {"id":"7AF8","source":"欧米茄"}
+
+
+### P2: M/F
+200.0 "--同步化--" MapEffect {"flags":"00020001","location":"0A"} window 200,0
+202.3 "--可选中--"
+203.4 "--同步化--" StartsUsing {"id":"7B40","source":"欧米茄"} window 210,5 # extra sync due to map effect sync
+206.4 "防御程序" Ability {"id":"7B40","source":"欧米茄"}
+214.5 "太阳射线" Ability {"id":"7E6A","source":"欧米茄"}
+
+# Party Synergy
+230.9 "协作程序PT" Ability {"id":"7B3E","source":"欧米茄"} window 20,20
+233.9 "--无法选中--"
+240.5 "--同步化--" Ability {"id":"7B1B","source":"欧米茄"}
+241.3 "剑连击B/欧米茄冰封" Ability {"id":["7B2A","7B2D"],"source":"欧米茄F"}
+241.3 "剑击/盾连击G" Ability {"id":["7B25","7B26"],"source":"欧米茄M"}
+247.7 "欧米茄烈炎" Ability {"id":"7B2F","source":"欧米茄"}
+248.0 "光学射线F" Ability {"id":"7B21","source":"视觉组"}
+250.8 "--同步化--" Ability {"id":"7B1F","source":"欧米茄"}
+254.9 "能量放出" Ability {"id":"7B2E","source":"欧米茄"}
+259.1 "聚光灯 x2" Ability {"id":"7B30","source":"欧米茄M"}
+259.1 "剑击" Ability {"id":"7B26","source":"欧米茄M"}
+
+# Limitless Synergy
+262.1 "--可选中--"
+272.2 "合成盾" Ability {"id":"7E71","source":"欧米茄"}
+282.4 "协作程序LB" Ability {"id":"7B38","source":"欧米茄"} window 20,20
+285.5 "--同步化--" Ability {"id":"7B42","source":"欧米茄"}
+287.4 "欧米茄武装戍卫" Ability {"id":"7B44","source":"欧米茄"}
+288.6 "合成盾" Ability {"id":"7E71","source":"欧米茄M"}
+295.6 "欧米茄刀光剑舞 x2" Ability {"id":"7B34","source":"欧米茄M"}
+295.7 "欧米茄射手天箭" Ability {"id":"7B33","source":"欧米茄M"}
+306.7 "盾连击S" Ability {"id":"7B27","source":"欧米茄M"}
+309.7 "欧米茄陨石流星" Ability {"id":"7B31","source":"欧米茄F"}
+310.0 "能量投射" Ability {"id":"7B29","source":"欧米茄M"}
+318.8 "宇宙记忆" Ability {"id":"7B22","source":"欧米茄M"}
+
+# 60 second cast, starting at same time of Passage of Arms
+347.4 "激光骤雨 狂暴" Ability {"id":"7B45","source":"欧米茄"}
+
+
+### P3: "Final" Omega
+400.0 "--同步化--" Ability {"id":"7B13","source":"欧米茄"} window 400,0
+409.3 "--同步化--" Ability {"id":"7B4A","source":"欧米茄"}
+412.3 "--同步化--" Ability {"id":"7B4B","source":"欧米茄"}
+414.3 "速射式波动炮 1" Ability {"id":"7B4F","source":"欧米茄"}
+416.4 "速射式波动炮 2" Ability {"id":"7B50","source":"欧米茄"}
+418.4 "速射式波动炮 3" Ability {"id":"7B51","source":"欧米茄"}
+420.4 "速射式波动炮 4" Ability {"id":"7B52","source":"欧米茄"}
+422.4 "速射式波动炮 1" Ability {"id":"7B4F","source":"欧米茄"}
+424.5 "速射式波动炮 2" Ability {"id":"7B50","source":"欧米茄"}
+426.4 "巨能爆散" Ability {"id":"7B4E","source":["左臂组","右臂组"]} window 1,1
+426.6 "速射式波动炮 3" Ability {"id":"7B51","source":"欧米茄"}
+# sniper cannon times are a little sloppy and have inconsistent actor names
+427.3 "狙击式大功率波动炮” x2" #Ability { id: "7B54", source: "Omega" }
+428.4 "狙击式波动炮” x4" #Ability { id: "7B53", source: "Omega" }
+428.7 "速射式波动炮 4" Ability {"id":"7B52","source":"欧米茄"}
+428.9 "巨能爆散" Ability {"id":"7B4E","source":["左臂组","右臂组"]} window 1,1
+
+432.3 "--可选中--"
+436.3 "--同步化--" StartsUsing {"id":"7B55","source":"欧米茄"} window 40,40
+
+441.3 "你好，世界" Ability {"id":"7B55","source":"欧米茄"}
+# Most of the damage comes in 7B56 Critical Synchronization Bug,
+# and 7B57 Critical Overflow Bug which is 1s after latent defect
+# (and patch, obviously).  There's also a ton of other Latent X
+# abilities here.  All of these are skipped for noise reasons.
+
+455.4 "--同步化--" StartsUsing {"id":"7B6F","source":"欧米茄"}
+464.4 "潜在错误 1" Ability {"id":"7B6F","source":"欧米茄"}
+# people break both patches here whenever, so don't sync these times
+# this time is roughly when people break the first one.
+466.9 "补丁 x2" #Ability { id: "7B63", source: "Omega" }
+
+476.4 "--同步化--" StartsUsing {"id":"7B6F","source":"欧米茄"}
+485.4 "潜在错误 2" Ability {"id":"7B6F","source":"欧米茄"}
+487.9 "补丁 x2" #Ability { id: "7B63", source: "Omega" }
+
+497.5 "--同步化--" StartsUsing {"id":"7B6F","source":"欧米茄"}
+506.5 "潜在错误 3" Ability {"id":"7B6F","source":"欧米茄"}
+509.0 "补丁 x2" #Ability { id: "7B63", source: "Omega" }
+
+518.8 "--同步化--" StartsUsing {"id":"7B6F","source":"欧米茄"}
+527.5 "补丁" #Ability { id: "7B63", source: "Omega" }
+527.8 "潜在错误 4" Ability {"id":"7B6F","source":"欧米茄"}
+533.5 "补丁" #Ability { id: "7B63", source: "Omega" }
+
+542.1 "--同步化--" StartsUsing {"id":"7B64","source":"欧米茄"} window 30,30
+550.1 "严重错误" Ability {"id":"7B64","source":"欧米茄"}
+
+560.2 "--同步化--" Ability {"id":"7B46","source":"欧米茄"}
+571.4 "探测式波动炮" Ability {"id":["7B6B","7B6C"],"source":"欧米茄"}
+577.4 "--同步化--" StartsUsing {"id":"7B48","source":"欧米茄"} window 50,50
+587.4 "离子流出 狂暴" Ability {"id":"7B48","source":"欧米茄"}
+
+
+### P4: Blue Screen
+600.0 "--同步化--" Ability {"id":"7B47","source":"欧米茄"} window 600,0
+600.0 "--无法选中--"
+607.1 "--同步化--" Ability {"id":"7B7A","source":"欧米茄"}
+607.1 "--可选中--"
+615.2 "--同步化--" Ability {"id":"7B46","source":"欧米茄"}
+619.0 "--同步化--" Ability {"id":"5779","source":"欧米茄"}
+621.4 "波动炮 A" Ability {"id":"7B81","source":"欧米茄"}
+626.7 "波动炮 B" Ability {"id":"7F16","source":"欧米茄"}
+627.0 "波动炮 (stacks)" Ability {"id":"7B7F","source":"欧米茄"}
+
+629.1 "--同步化--" Ability {"id":"5779","source":"欧米茄"}
+629.4 "速射式波动炮 1" Ability {"id":"7B4F","source":"欧米茄"}
+631.5 "速射式波动炮 2" Ability {"id":"7B50","source":"欧米茄"}
+631.5 "波动炮 A" Ability {"id":"7F16","source":"欧米茄"}
+633.5 "速射式波动炮 3" Ability {"id":"7B51","source":"欧米茄"}
+635.5 "速射式波动炮 4" Ability {"id":"7B52","source":"欧米茄"}
+636.6 "波动炮 B" Ability {"id":"7B82","source":"欧米茄"}
+636.8 "波动炮 (stacks)" Ability {"id":"7B7F","source":"欧米茄"}
+
+639.0 "--同步化--" Ability {"id":"5779","source":"欧米茄"}
+641.6 "波动炮 A" Ability {"id":"7B83","source":"欧米茄"}
+646.6 "速射式波动炮 1" Ability {"id":"7B4F","source":"欧米茄"}
+646.7 "波动炮 B" Ability {"id":"7B84","source":"欧米茄"}
+646.9 "波动炮 (stacks)" Ability {"id":"7B7F","source":"欧米茄"}
+648.6 "速射式波动炮 2" Ability {"id":"7B50","source":"欧米茄"}
+650.6 "速射式波动炮 3" Ability {"id":"7B51","source":"欧米茄"}
+652.6 "速射式波动炮 4" Ability {"id":"7B52","source":"欧米茄"}
+661.6 "Blue Screen 狂暴" Ability {"id":"7B7B","source":"欧米茄"}
+661.6 "--无法选中--"
+
+
+### P5: Run: Dynamis
+# Blue Screen DPS check passed
+700.0 "--同步化--" Ability {"id":"7B7C","source":"欧米茄"} window 700,0
+706.0 "--同步化--" Ability {"id":"7B86","source":"欧米茄F"}
+706.0 "--同步化--" Ability {"id":"7B85","source":"欧米茄M"}
+
+# Delta Version
+715.6 "--可选中--"
+723.6 "太阳射线 1" Ability {"id":"81AC","source":"欧米茄M"}
+726.8 "太阳射线 2" Ability {"id":"7B01","source":"欧米茄M"}
+733.9 "--同步化--" Ability {"id":"7B42","source":"欧米茄M"}
+740.0 "代码：＊能＊（德尔塔）" Ability {"id":"7B88","source":"欧米茄M"}
+743.0 "--无法选中--"
+750.2 "生成外设" Ability {"id":"7B8C","source":"欧米茄"}
+753.2 "手臂归档" Ability {"id":"7F76","source":"欧米茄"}
+761.2 "补丁" #Ability { id: "7B63", source: "Omega-M" }
+763.2 "光学射线F" Ability {"id":"7B21","source":"视觉组"}
+764.9 "补丁" #Ability { id: "7B63", source: "Omega-M" }
+766.4 "爆炸" Ability {"id":"7AFA","source":"火箭飞拳"}
+768.5 "盾连击S" Ability {"id":"7B27","source":"欧米茄M"}
+771.1 "超能脉冲" Ability {"id":"7B70","source":"右臂组"}
+771.8 "超能脉冲" #Ability { id: "7B71", source: "Right Arm Unit" }
+772.4 "超能脉冲" #Ability { id: "7B71", source: "Right Arm Unit" }
+773.0 "超能脉冲" #Ability { id: "7B71", source: "Right Arm Unit" }
+773.6 "超能脉冲" #Ability { id: "7B71", source: "Right Arm Unit" }
+773.6 "探测式波动炮" Ability {"id":"7B6D","source":"欧米茄"}
+774.0 "能量投射" Ability {"id":"7B29","source":"欧米茄M"}
+774.0 "超能脉冲" #Ability { id: "7B71", source: "Right Arm Unit" }
+782.0 "补丁" #Ability { id: "7B63", source: "Omega-M" }
+784.0 "补丁" #Ability { id: "7B63", source: "Omega-M" }
+786.4 "回旋式波动炮" Ability {"id":["7B94","7B95"],"source":"欧米茄"}
+787.0 "你好，远处世界 1" Ability {"id":"8110","source":"欧米茄M"}
+787.0 "你好，近处世界 1" Ability {"id":"7B89","source":"欧米茄M"}
+788.0 "你好，远处世界 2" #Ability { id: "8111", source: "Omega-M" }
+788.0 "你好，近处世界 2" #Ability { id: "7B8A", source: "Omega-M" }
+789.0 "你好，远处世界 3" #Ability { id: "8111", source: "Omega-M" }
+789.0 "你好，近处世界 3" #Ability { id: "7B8A", source: "Omega-M" }
+
+# Sigma Version
+791.1 "--可选中--"
+805.2 "太阳射线 1" Ability {"id":"81AC","source":"欧米茄M"}
+808.5 "太阳射线 2" Ability {"id":"7B01","source":"欧米茄M"}
+815.6 "--同步化--" Ability {"id":"7B42","source":"欧米茄M"}
+821.7 "代码：＊能＊（西格玛）" Ability {"id":"8014","source":"欧米茄M"}
+824.7 "--无法选中--"
+
+839.0 "变形F" Ability {"id":"7F2F","source":"欧米茄M"}
+840.0 "--同步化--" Ability {"id":"7B14","source":"欧米茄M"}
+840.4 "循环程序" Ability {"id":"7B98","source":"欧米茄"}
+841.1 "--同步化--" Ability {"id":"7B16","source":"欧米茄M"}
+843.8 "超能脉冲" Ability {"id":"7B72","source":"右臂组"}
+844.0 "波动炮" Ability {"id":"7B73","source":"欧米茄"}
+845.1 "--同步化--" Ability {"id":"7F30","source":"欧米茄M"}
+848.7 "--同步化--" Ability {"id":"7B15","source":"欧米茄"}
+849.3 "--同步化--" Ability {"id":"7B20","source":"欧米茄M"}
+851.3 "--同步化--" Ability {"id":"7B43","source":"欧米茄M"}
+
+852.4 "能量放出" Ability {"id":"7B2E","source":"欧米茄M"}
+856.4 "清除记忆污染S x5 / Storage Violation x6" Ability {"id":"7B0[45]","source":"欧米茄"}
+
+870.6 "背环激光 x14" Ability {"id":"7B8F","source":"尾部组"} duration 7.8
+873.7 "剑连击B/欧米茄冰封" Ability {"id":["7B2A","7B2D"],"source":"欧米茄M"}
+880.6 "你好，近处世界 1" Ability {"id":"7B89","source":"欧米茄F"}
+880.6 "你好，远处世界 1" Ability {"id":"8110","source":"欧米茄F"}
+880.6 "超能脉冲" Ability {"id":"7B72","source":"右臂组"}
+881.6 "你好，近处世界 2" #Ability { id: "7B8A", source: "Omega-F" }
+881.6 "你好，远处世界 2" #Ability { id: "8111", source: "Omega-F" }
+882.6 "你好，近处世界 3" #Ability { id: "7B8A", source: "Omega-F" }
+882.6 "你好，远处世界 3" #Ability { id: "8111", source: "Omega-F" }
+
+# Omega Version
+885.3 "--可选中--"
+887.3 "--同步化--" Ability {"id":"7C02","source":"欧米茄M"}
+894.3 "太阳射线 1" Ability {"id":"81AD","source":"欧米茄M"}
+897.4 "太阳射线 2" Ability {"id":"7B02","source":"欧米茄M"}
+904.6 "--同步化--" Ability {"id":"7B43","source":"欧米茄M"}
+910.7 "代码：＊能＊（欧米茄）" Ability {"id":"8015","source":"欧米茄M"}
+927.8 "扩散波动炮" Ability {"id":["7B9B","7B9C"],"source":"欧米茄"}
+# 928.8 "Superliminal Steel" Ability { id: "7B2A", source: "Omega-F" }
+# 928.8 "Beyond Strength" Ability { id: "7B25", source: "Omega-M" }
+931.9 "扩散波动炮" Ability {"id":["7B78","7B77"],"source":"欧米茄"}
+# 932.7 "Optimized Blizzard III" Ability { id: "7B2D", source: "Omega-F" }
+# 932.7 "Beyond Strength" Ability { id: "7B25", source: "Omega-M" }
+935.6 "--无法选中--"
+
+945.4 "你好，远处世界 1" Ability {"id":"8110","source":"欧米茄F"}
+945.4 "你好，近处世界 1" Ability {"id":"7B89","source":"欧米茄F"}
+945.8 "探测式波动炮" Ability {"id":"7B6D","source":"欧米茄"}
+946.4 "你好，远处世界 2" #Ability { id: "8111", source: "Omega-F" }
+946.4 "你好，近处世界 2" #Ability { id: "7B8A", source: "Omega-F" }
+947.4 "你好，远处世界 3" #Ability { id: "8111", source: "Omega-F" }
+947.4 "你好，近处世界 3" #Ability { id: "7B8A", source: "Omega-F" }
+
+961.6 "冲击波 x2" Ability {"id":"7E75","source":"欧米茄F"}
+963.4 "你好，远处世界 1" Ability {"id":"8110","source":"欧米茄F"}
+963.4 "你好，近处世界 1" Ability {"id":"7B89","source":"欧米茄F"}
+964.4 "你好，远处世界 2" #Ability { id: "8111", source: "Omega-F" }
+964.4 "你好，近处世界 2" #Ability { id: "7B8A", source: "Omega-F" }
+965.4 "你好，远处世界 3" #Ability { id: "8111", source: "Omega-F" }
+965.4 "你好，近处世界 3" #Ability { id: "7B8A", source: "Omega-F" }
+
+967.7 "--可选中--"
+976.8 "太阳射线 1" Ability {"id":"81AD","source":"欧米茄M"}
+979.9 "太阳射线 2" Ability {"id":"7B02","source":"欧米茄M"}
+988.2 "--同步化--" Ability {"id":"7B43","source":"欧米茄M"}
+998.5 "盲信" Ability {"id":"7B87","source":"欧米茄M"}
+999.7 "盲信 狂暴" Ability {"id":"7F73","source":"欧米茄F"}
+
+
+### P6: Alpha Omega
+# Blind Faith DPS check passed
+1100.0 "--同步化--" Ability {"id":"7F72","source":"欧米茄F"} window 1100,0
+
+1154.7 "--可选中--"
+# LB3 Check
+1167.8 "宇宙记忆" Ability {"id":"7BA1","source":"阿尔法欧米茄"}
+1171.9 "--同步化--" Ability {"id":"7C03","source":"阿尔法欧米茄"}
+1172.8 "闪光风 1" Ability {"id":"7DDF","source":"欧米茄F"}
+1175.1 "--同步化--" Ability {"id":"7C03","source":"阿尔法欧米茄"}
+1176.0 "闪光风 2" Ability {"id":"7DDF","source":"阿尔法欧米茄"}
+
+1182.2 "宇宙天箭" Ability {"id":"7BA2","source":"阿尔法欧米茄"} duration 14
+1196.9 "宇宙龙炎" Ability {"id":"7BA6","source":"阿尔法欧米茄"}
+1199.3 "宇宙龙炎 Far" #Ability { id: "7BA8", source: "Alpha Omega" }
+1199.3 "宇宙龙炎 Near x2" #Ability { id: "7BA7", source: "Alpha Omega" }
+1206.1 "--同步化--" Ability {"id":"7C03","source":"阿尔法欧米茄"}
+1207.0 "闪光风 1" Ability {"id":"7DDF","source":"阿尔法欧米茄"}
+1209.3 "--同步化--" Ability {"id":"7C03","source":"阿尔法欧米茄"}
+1210.2 "闪光风 2" Ability {"id":"7DDF","source":"阿尔法欧米茄"}
+
+1215.4 "波动炮：限制解除" Ability {"id":"7BAC","source":"阿尔法欧米茄"}
+1223.4 "波动炮 Puddle 1" #Ability { id: "7BAF", source: "Alpha Omega" }
+1225.2 "波动炮 Puddle 2" #Ability { id: "7BAF", source: "Alpha Omega" }
+1227.1 "波动炮 Puddle 3" #Ability { id: "7BAF", source: "Alpha Omega" }
+1229.0 "波动炮 Puddle 4" #Ability { id: "7BAF", source: "Alpha Omega" }
+1230.9 "波动炮 Puddle 5" #Ability { id: "7BAF", source: "Alpha Omega" }
+1232.9 "波动炮 Puddle 6" #Ability { id: "7BAF", source: "Alpha Omega" }
+1236.0 "波动炮 1" #Ability { id: "7BAB", source: "Alpha Omega" }
+1238.0 "波动炮 2" #Ability { id: "7BAB", source: "Alpha Omega" }
+1243.9 "--同步化--" Ability {"id":"7BA9","source":"阿尔法欧米茄"}
+1244.3 "波动炮 (Wild Charge)" #Ability { id: "7BAA", source: "Alpha Omega" }
+1248.4 "--同步化--" Ability {"id":"7C03","source":"阿尔法欧米茄"}
+1249.3 "闪光风 1" Ability {"id":"7DDF","source":"阿尔法欧米茄"}
+1251.6 "--同步化--" Ability {"id":"7C03","source":"阿尔法欧米茄"}
+1252.5 "闪光风 2" Ability {"id":"7DDF","source":"阿尔法欧米茄"}
+
+1258.7 "宇宙天箭" Ability {"id":"7BA2","source":"阿尔法欧米茄"} duration 14
+1269.9 "波动炮 1" #Ability { id: "7BAB", source: "Alpha Omega" }
+1271.9 "波动炮 2" #Ability { id: "7BAB", source: "Alpha Omega" }
+1277.8 "--同步化--" Ability {"id":"7BA9","source":"阿尔法欧米茄"}
+1278.2 "波动炮 (Wild Charge)" #Ability { id: "7BAA", source: "Alpha Omega" }
+1282.3 "--同步化--" Ability {"id":"7C03","source":"阿尔法欧米茄"}
+1283.2 "闪光风 1" Ability {"id":"7DDF","source":"阿尔法欧米茄"}
+1285.5 "--同步化--" Ability {"id":"7C03","source":"阿尔法欧米茄"}
+1286.4 "闪光风 2" Ability {"id":"7DDF","source":"阿尔法欧米茄"}
+
+1291.7 "波动炮：限制解除" Ability {"id":"7BAC","source":"阿尔法欧米茄"}
+1299.7 "波动炮 Puddle 1" #Ability { id: "7BAF", source: "Alpha Omega" }
+1301.5 "波动炮 Puddle 2" #Ability { id: "7BAF", source: "Alpha Omega" }
+1303.4 "波动炮 Puddle 3" #Ability { id: "7BAF", source: "Alpha Omega" }
+1305.3 "波动炮 Puddle 4" #Ability { id: "7BAF", source: "Alpha Omega" }
+1307.2 "波动炮 Puddle 5" #Ability { id: "7BAF", source: "Alpha Omega" }
+1309.2 "波动炮 Puddle 6" #Ability { id: "7BAF", source: "Alpha Omega" }
+1310.0 "宇宙龙炎" Ability {"id":"7BA6","source":"阿尔法欧米茄"}
+1312.4 "宇宙龙炎 Far" #Ability { id: "7BA8", source: "Alpha Omega" }
+1312.4 "宇宙龙炎 Near x2" #Ability { id: "7BA7", source: "Alpha Omega" }
+1319.2 "--同步化--" Ability {"id":"7C03","source":"阿尔法欧米茄"}
+1320.1 "闪光风 1" Ability {"id":"7DDF","source":"阿尔法欧米茄"}
+1322.4 "--同步化--" Ability {"id":"7C03","source":"阿尔法欧米茄"}
+1323.2 "闪光风 2" Ability {"id":"7DDF","source":"阿尔法欧米茄"}
+
+# Range/Caster Brilliant Dynamis Checks
+1331.6 "宇宙流星" Ability {"id":"7BB0","source":"阿尔法欧米茄"}
+1335.6 "宇宙流星 Baits" Ability {"id":"7BB2","source":"阿尔法欧米茄"}
+
+1336.7 "宇宙流星 1 x4" #Ability { id: "7FBB", source: "Alpha Omega" }
+1337.7 "宇宙流星 2 x4" #Ability { id: "7FBB", source: "Alpha Omega" }
+# TODO: Adjust targetable
+1339.3 "--小怪可选中--"
+1342.7 "宇宙流星 1 x4" #Ability { id: "7FBB", source: "Alpha Omega" }
+1343.7 "宇宙流星 2 x4" #Ability { id: "7FBB", source: "Alpha Omega" }
+
+1354.7 "宇宙流星 Stack" Ability {"id":"7BB3","source":"阿尔法欧米茄"}
+1354.7 "宇宙流星 Flare x3" Ability {"id":"7BB4","source":"阿尔法欧米茄"}
+1355.7 "宇宙流星" Ability {"id":"7BB1","source":"阿尔法欧米茄"}
+1357.0 "宇宙流星 狂暴" Ability {"id":"7BB5","source":"宇宙流星"}
+
+# Tank 1 and Healer 1 Brilliant Dynamis Checks
+1361.7 "--同步化--" StartsUsing {"id":"7BB6","source":"阿尔法欧米茄"} window 5,5
+1366.7 "魔数" Ability {"id":"7BB6","source":"阿尔法欧米茄"}
+
+# Tank 2 and Healer 2 Brilliant Dynamis Checks
+1377.8 "--同步化--" StartsUsing {"id":"7BB6","source":"阿尔法欧米茄"} window 5,5
+1382.8 "魔数" Ability {"id":"7BB6","source":"阿尔法欧米茄"}
+
+1391.9 "--同步化--" StartsUsing {"id":"7BA0","source":"阿尔法欧米茄"} window 50,50
+# The cast bar and logs say "16 seconds" but it appears to be ~30s in practice.
+1421.9 "Run: ****mi* 狂暴" Ability {"id":"7BA0","source":"阿尔法欧米茄"}

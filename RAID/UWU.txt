@@ -1,0 +1,330 @@
+
+# Ultima Weapon Ultimate
+## http://clees.me/guides/uwu/
+
+# -ii 2B51 2B59 2B58 2BB5 2B44 2B45 2B46 2B47 2B64 2B6E 2B77 2B6A 2B98 2B89 2B83 2B91 2DB8 2B75 2C20 2C21 2C1F 2B80 2B5C 2B6D 25BC 2B60 2B6F 2B71 2B7F 2B61 2CB8 2B43 2CD3 2CD4 2CD5
+# -p 2B5F:303 2CFD:603 2CF5:800 2B87:1004 2CD3:1300
+# -it "Ifrit" "Garuda" "Titan" "The Ultima Weapon"
+
+# NOTE: this was an old timeline that was rounded to seconds instead of tenths of seconds.
+# There are portions at the ends of phases that need to be retimed more accurately if
+# anybody sees them again. See "retime below" sections.
+
+hideall "--sync--"
+hideall "--Reset--"
+
+
+### Phase 1: Garuda ###
+0.0 "--同步化--" InCombat {"inGameCombat":"1"} window 0,1
+6.3 "--同步化--" StartsUsing {"id":"2B53","source":"迦楼罗"} window 10,10
+8.8 "螺旋气流" Ability {"id":"2B53","source":"迦楼罗"}
+11.4 "寒风之歌" Ability {"id":"2B42","source":"迦楼罗"}
+17.5 "大龙卷风" Ability {"id":"2B41","source":"迦楼罗"}
+23.6 "大龙卷风" Ability {"id":"2B41","source":"迦楼罗"}
+24.2 "螺旋气流" Ability {"id":"2B53","source":"迦楼罗"}
+27.6 "下行突风" Ability {"id":"2B50","source":"迦楼罗"}
+29.7 "大龙卷风" Ability {"id":"2B41","source":"迦楼罗"}
+34.9 "--无法选中--"
+37.5 "飞翎雨" Ability {"id":"2B4D","source":"迦楼罗"}
+39.2 "--可选中--"
+42.2 "寒风之啸" Ability {"id":"2B54","source":"迦楼罗"}
+51.5 "烈风刃 1" Ability {"id":"2B48","source":"迦楼罗"}
+57.6 "烈风刃 2" Ability {"id":"2B48","source":"迦楼罗"}
+69.5 "--无法选中--"
+72.1 "飞翎雨" Ability {"id":"2B4D","source":"迦楼罗"}
+73.8 "--可选中--"
+76.8 "大气爆发" Ability {"id":"2B55","source":"迦楼罗"}
+92.9 "飞翎雨" Ability {"id":"2B4D","source":"迦楼罗"}
+99.8 "寒风之歌 x2" Ability {"id":"2B4B","source":"妙翅"}
+100.1 "台风眼" Ability {"id":"2B52","source":"迦楼罗"}
+100.2 "邪轮旋风" Ability {"id":"2B4E","source":"迦楼罗"}
+104.2 "飞翎雨" Ability {"id":"2B4D","source":"迦楼罗"}
+105.8 "大龙卷风" Ability {"id":"2B41","source":"美翼"}
+121.8 "螺旋气流" Ability {"id":"2B53","source":"迦楼罗"}
+123.0 "台风眼" Ability {"id":"2B52","source":"迦楼罗"}
+125.0 "中高压 x2" Ability {"id":"2B49","source":"妙翅"}
+125.1 "下行突风" Ability {"id":"2B50","source":"迦楼罗"}
+129.6 "飞翎雨" Ability {"id":"2B4D","source":"迦楼罗"}
+142.2 "螺旋气流" Ability {"id":"2B53","source":"迦楼罗"}
+150.6 "邪轮旋风" Ability {"id":"2B4E","source":"迦楼罗"}
+152.6 "邪气龙卷" Ability {"id":"2B4F","source":"迦楼罗"}
+155.4 "下行突风" Ability {"id":"2B50","source":"迦楼罗"}
+163.4 "螺旋气流" Ability {"id":"2B53","source":"迦楼罗"}
+# retime below
+176.5 "--无法选中--" Ability {"id":"2B4D","source":"迦楼罗"}
+181.5 "大气爆发" Ability {"id":"2B55","source":"迦楼罗"}
+
+
+### Phase 2: Ifrit ###
+300.0 "--同步化--" StartsUsing {"id":"2B5F","source":"伊弗利特"} window 300,0
+303.0 "深红旋风" Ability {"id":"2B5F","source":"伊弗利特"}
+304.0 "光辉炎柱" Ability {"id":"2B61","source":"伊弗利特"}
+307.1 "--可选中--"
+310.1 "地狱之火炎" Ability {"id":"2B5E","source":"伊弗利特"}
+318.3 "火神爆裂" Ability {"id":"2B57","source":"伊弗利特"}
+321.2 "烈焰焚烧 1" Ability {"id":"2B56","source":"伊弗利特"}
+324.3 "烈焰焚烧 2" Ability {"id":"2B56","source":"伊弗利特"}
+328.4 "烈焰焚烧 3" Ability {"id":"2B56","source":"伊弗利特"}
+331.5 "--火神柱--" Ability {"id":"1CD","source":"伊弗利特"}
+340.6 "火狱之锁" Ability {"id":"2C19","source":"伊弗利特"}
+342.7 "灼热咆哮" Ability {"id":"2B5B","source":"伊弗利特"} duration 18
+348.8 "地火喷发 1" #Ability { id: "2B5A", source: "Ifrit" }
+350.8 "地火喷发 2" #Ability { id: "2B5A", source: "Ifrit" }
+352.8 "地火喷发 3" #Ability { id: "2B5A", source: "Ifrit" }
+354.8 "地火喷发 4" #Ability { id: "2B5A", source: "Ifrit" }
+365.7 "--无法选中--"
+369.9 "--可选中--"
+369.9 "--同步化--" StartsUsing {"id":"2B5E","source":"伊弗利特"} window 10,10
+372.9 "地狱之火炎" Ability {"id":"2B5E","source":"伊弗利特"}
+381.2 "灼热咆哮 1" Ability {"id":"2B5B","source":"伊弗利特"} duration 30
+387.3 "地火喷发 1" #Ability { id: "2B5A", source: "Ifrit" }
+389.3 "地火喷发 2" #Ability { id: "2B5A", source: "Ifrit" }
+391.3 "地火喷发 3" #Ability { id: "2B5A", source: "Ifrit" }
+393.3 "地火喷发 4" #Ability { id: "2B5A", source: "Ifrit" }
+394.3 "深红旋风" Ability {"id":"2B5F","source":"伊弗利特"}
+399.2 "灼热咆哮 2" Ability {"id":"2B5B","source":"伊弗利特"} duration 30
+409.6 "烈焰碎击" Ability {"id":"2B5D","source":"伊弗利特"}
+413.6 "--无法选中--"
+421.1 "深红旋风 1" #Ability { id: "2B5F", source: "Ifrit" }
+422.5 "深红旋风 2" #Ability { id: "2B5F", source: "Ifrit" }
+424.0 "深红旋风 3" #Ability { id: "2B5F", source: "Ifrit" }
+425.4 "深红旋风 4" #Ability { id: "2B5F", source: "Ifrit" }
+429.5 "--可选中--"
+433.6 "烈焰焚烧 1" Ability {"id":"2B56","source":"伊弗利特"}
+436.7 "烈焰焚烧 2" Ability {"id":"2B56","source":"伊弗利特"}
+440.8 "烈焰焚烧 3" Ability {"id":"2B56","source":"伊弗利特"}
+# retime below
+447.0 "地火喷发 1" #Ability { id: "2B5A", source: "Ifrit" }
+449.0 "地火喷发 2" #Ability { id: "2B5A", source: "Ifrit" }
+451.0 "地火喷发 3" #Ability { id: "2B5A", source: "Ifrit" }
+453.0 "地火喷发 4" #Ability { id: "2B5A", source: "Ifrit" }
+456.0 "烈焰碎击" Ability {"id":"2B5D","source":"伊弗利特"}
+# ??? unknown enrage
+
+
+### Phase 3: Titan ###
+600.0 "--同步化--" StartsUsing {"id":"2CFD","source":"泰坦"} window 600,0
+603.0 "大地粉碎" Ability {"id":"2CFD","source":"泰坦"}
+605.3 "--可选中--"
+608.3 "大地之怒" Ability {"id":"2B90","source":"泰坦"}
+616.4 "碎岩" Ability {"id":"2B62","source":"泰坦"}
+619.5 "山崩" Ability {"id":"2B63","source":"泰坦"}
+624.5 "大地之重 1" Ability {"id":"2B65","source":"泰坦"}
+627.5 "大地之重 2" Ability {"id":"2B65","source":"泰坦"}
+627.6 "--无法选中--"
+632.8 "大地粉碎" Ability {"id":"2B66","source":"泰坦"}
+635.1 "--可选中--"
+635.1 "--同步化--" Ability {"id":"2B68","source":"泰坦"}
+638.1 "塌方" Ability {"id":"2B69","source":"爆破岩石"}
+641.1 "大怒震" Ability {"id":"2B67","source":"泰坦"}
+643.2 "花岗岩牢狱" Ability {"id":"2B6B","source":"泰坦"}
+646.1 "塌方" Ability {"id":"2B69","source":"爆破岩石"}
+647.7 "地裂 1" Ability {"id":"2B70","source":"泰坦"}
+652.1 "地裂 2" Ability {"id":"2B70","source":"泰坦"}
+654.2 "怒震 x8" duration 7.7 #Ability { id: "2C18", source: "Titan" }
+670.0 "大地之重 1" Ability {"id":"2B65","source":"泰坦"}
+673.0 "大地之重 2" Ability {"id":"2B65","source":"泰坦"}
+675.0 "地裂 1" Ability {"id":"2B70","source":"泰坦"}
+677.0 "地裂 2" Ability {"id":"2C22","source":"泰坦"}
+681.1 "--无法选中--"
+686.3 "大地粉碎" Ability {"id":"2B66","source":"泰坦"}
+688.6 "--可选中--"
+688.6 "花岗岩牢狱" Ability {"id":"2B6B","source":"泰坦"}
+702.9 "地裂 1" Ability {"id":"2B70","source":"泰坦"}
+704.9 "地裂 2" Ability {"id":"2C22","source":"泰坦"}
+708.0 "怒震 x6" duration 5.5 #Ability { id: "2C18", source: "Titan" }
+715.6 "碎岩" Ability {"id":"2B62","source":"泰坦"}
+719.6 "山崩" Ability {"id":"2B63","source":"泰坦"}
+721.6 "--同步化--" Ability {"id":"2B68","source":"泰坦"}
+724.6 "塌方" #Ability { id: "2B69", source: "Bomb Boulder" }
+726.6 "塌方" #Ability { id: "2B69", source: "Bomb Boulder" }
+726.6 "大地之重 1" Ability {"id":"2B65","source":"泰坦"}
+728.6 "塌方" #Ability { id: "2B69", source: "Bomb Boulder" }
+729.6 "大地之重 2" Ability {"id":"2B65","source":"泰坦"}
+730.6 "塌方" #Ability { id: "2B69", source: "Bomb Boulder" }
+731.9 "地裂 1" Ability {"id":"2B70","source":"泰坦"}
+732.7 "大地之重 3" Ability {"id":"2B65","source":"泰坦"}
+733.9 "地裂 2" Ability {"id":"2C22","source":"泰坦"}
+740.0 "碎岩" Ability {"id":"2B62","source":"泰坦"}
+744.0 "山崩" Ability {"id":"2B63","source":"泰坦"}
+749.1 "大地之重 1" Ability {"id":"2B65","source":"泰坦"}
+752.1 "大地之重 2" Ability {"id":"2B65","source":"泰坦"}
+755.1 "大地之重 3" Ability {"id":"2B65","source":"泰坦"}
+756.8 "怒震 x8" duration 7.7 #Ability { id: "2C18", source: "Titan" }
+772.5 "--无法选中--"
+779.8 "大地之怒 狂暴" Ability {"id":"2B90","source":"泰坦"}
+
+
+### Phase 4: Snacks ###
+800.0 "诱导爆炸" Ability {"id":"2CF5"} window 800,0
+802.0 "--可选中--"
+803.0 "--同步化--" StartsUsing {"id":"2B72","source":"浮游炮射出"}
+815.0 "雾散爆发" Ability {"id":"2B72","source":"浮游炮射出"}
+815.2 "毒雾" Ability {"id":"2B73","source":"拉哈布雷亚"} window 50,10
+824.2 "--同步化--" StartsUsing {"id":"2B74","source":"拉哈布雷亚"} window 50,10
+841.2 "冥暗" Ability {"id":"2B74","source":"拉哈布雷亚"} window 50,10
+845.4 "--同步化--" StartsUsing {"id":"2B8B","source":"究极神兵"} window 50,10
+850.4 "究极" Ability {"id":"2B8B","source":"究极神兵"} window 50,10 forcejump 960.3
+
+
+### Phase 5: Ultima ###
+960.3 "究极" Ability {"id":"2B8B","source":"究极神兵"}
+1000 "--可选中--" StartsUsing {"id":"2B87","source":"究极神兵"} window 1000,100
+1004.0 "魔导核爆" Ability {"id":"2B87","source":"究极神兵"}
+1006.3 "--吸附式炸弹--" Ability {"id":"2B79","source":"究极神兵"}
+1012.4 "诱导射线" Ability {"id":"2B7B","source":"究极神兵"}
+1017.4 "引爆吸附式炸弹" Ability {"id":"2B7A","source":"究极神兵"}
+
+## Ultimate Predation
+1020.5 "--同步化--" StartsUsing {"id":"2B76","source":"究极神兵"} window 30,30
+1023.5 "追击之究极幻想" Ability {"id":"2B76","source":"究极神兵"}
+1027.9 "--无法选中--"
+1038.2 "地裂" Ability {"id":"2B70","source":"泰坦"}
+1038.2 "深红旋风" Ability {"id":"2B5F","source":"伊弗利特"}
+1038.2 "邪轮旋风" Ability {"id":"2B4E","source":"迦楼罗"}
+1040.2 "青磷放射" Ability {"id":"2B7C","source":"究极神兵"}
+1040.2 "地裂" Ability {"id":"2C22","source":"泰坦"}
+1040.2 "邪气龙卷" Ability {"id":"2B4F","source":"迦楼罗"}
+1045.4 "飞翎雨" Ability {"id":"2B4D","source":"迦楼罗"}
+
+## Interlude Dance
+1047.4 "--可选中--"
+1059.8 "地火喷发 1" #Ability { id: "2B5A", source: "Ifrit" }
+1061.8 "地火喷发 2" #Ability { id: "2B5A", source: "Ifrit" }
+1063.8 "地火喷发 3" #Ability { id: "2B5A", source: "Ifrit" }
+1064.8 "火狱之锁" Ability {"id":"2C19","source":"伊弗利特"}
+1065.8 "地火喷发 4" #Ability { id: "2B5A", source: "Ifrit" }
+1067.9 "--同步化--" Ability {"id":"2B68","source":"泰坦"}
+1069.9 "光辉炎柱" Ability {"id":"2B7D","source":"究极神兵"}
+1070.9 "塌方 x6" duration 10 #Ability { id: "2B69", source: "Bomb Boulder" }
+#1074.2 "Landslide 1" Ability { id: "2B70", source: "Titan" }
+1074.9 "地裂 1" Ability {"id":"2B7E","source":"究极神兵"}
+1076.2 "地裂 2" Ability {"id":"2C22","source":"泰坦"}
+1079.3 "怒震 x7" duration 6.9 #Ability { id: "2C18", source: "Titan" }
+1082.3 "--吸附式炸弹--" Ability {"id":"2B79","source":"究极神兵"}
+1087.3 "邪轮旋风" Ability {"id":"2B4C","source":"妙翅"}
+1089.3 "寒风之啸" Ability {"id":"2B54","source":"迦楼罗"}
+1092.6 "飞翎雨" Ability {"id":"2B4D","source":"迦楼罗"}
+1093.4 "引爆吸附式炸弹" Ability {"id":"2B7A","source":"究极神兵"}
+1094.5 "诱导射线" Ability {"id":"2B7B","source":"究极神兵"}
+1096.2 "飞翎雨" Ability {"id":"2B4D","source":"迦楼罗"}
+
+## Ultimate Annihilation
+1098.8 "--同步化--" StartsUsing {"id":"2D4C","source":"究极神兵"} window 30,30
+1101.8 "爆击之究极幻想" Ability {"id":"2D4C","source":"究极神兵"}
+1106.2 "--无法选中--"
+1110.4 "--可选中--"
+1113.4 "大地之重 1" Ability {"id":"2B65","source":"泰坦"}
+1115.4 "烈焰碎击" Ability {"id":"2B5D","source":"伊弗利特"}
+1116.4 "大地之重 2" Ability {"id":"2B65","source":"泰坦"}
+1116.5 "台风眼" Ability {"id":"2B52","source":"迦楼罗"}
+# This damage is when the orb is taken, but the timing is the first moment it could be taken.
+1118.2 "以太爆雷 1" #Ability { id: "2B81", source: "Aetheroplasm" }
+1118.6 "中高压" Ability {"id":"2B49","source":"迦楼罗"}
+1119.5 "大地之重 3" Ability {"id":"2B65","source":"泰坦"}
+1119.5 "灼热咆哮" Ability {"id":"2B5B","source":"伊弗利特"}
+1123.2 "飞翎雨" Ability {"id":"2B4D","source":"迦楼罗"}
+1123.6 "以太爆雷 2" #Ability { id: "2B81", source: "Aetheroplasm" }
+1127.7 "深红旋风" Ability {"id":"2B5F","source":"伊弗利特"}
+1128.6 "地裂 1" Ability {"id":"2B70","source":"泰坦"}
+1130.6 "地裂 2" Ability {"id":"2C22","source":"泰坦"}
+1132.6 "以太爆雷 3" #Ability { id: "2B81", source: "Aetheroplasm" }
+1133.7 "台风眼" Ability {"id":"2B52","source":"迦楼罗"}
+1135.9 "以太爆雷 4" #Ability { id: "2B81", source: "Aetheroplasm" }
+1136.0 "中高压" Ability {"id":"2B49","source":"迦楼罗"}
+1138.8 "魔导核爆" Ability {"id":"2B87","source":"究极神兵"}
+1140.7 "飞翎雨" Ability {"id":"2B4D","source":"迦楼罗"}
+1142.9 "--无法选中--"
+1147.1 "--可选中--"
+1150.5 "台风眼" Ability {"id":"2B52","source":"迦楼罗"}
+1154.2 "诱导射线" Ability {"id":"2B7B","source":"究极神兵"}
+1162.3 "台风眼" Ability {"id":"2B52","source":"迦楼罗"}
+1164.4 "光辉炎柱" Ability {"id":"2B7D","source":"究极神兵"}
+1167.5 "扩散射线" Ability {"id":"2B78","source":"究极神兵"}
+1171.6 "火神爆裂" Ability {"id":"2CF4","source":"究极神兵"}
+
+1173.6 "台风眼" Ability {"id":"2B52","source":"迦楼罗"}
+1179.2 "诱导射线" Ability {"id":"2B7B","source":"究极神兵"}
+1183.3 "火神爆裂" Ability {"id":"2CF4","source":"究极神兵"}
+1185.5 "台风眼" Ability {"id":"2B52","source":"迦楼罗"}
+# retime from here, into natural push below
+1190 "扩散射线"
+
+## Ultimate Suppression (50%)
+1192.0 "--同步化--" StartsUsing {"id":"2D4D","source":"究极神兵"} window 1200,100
+1195.0 "乱击之究极幻想" Ability {"id":"2D4D","source":"究极神兵"}
+1199.4 "--无法选中--"
+1205.7 "花岗岩牢狱" Ability {"id":"2B6B","source":"泰坦"}
+1206.7 "地火喷发 1" #Ability { id: "2B5A", source: "Ifrit" }
+1208.7 "地火喷发 2" #Ability { id: "2B5A", source: "Ifrit" }
+1209.8 "寒风之歌" Ability {"id":"2B4B","source":"美翼"}
+1210.7 "地火喷发 3" #Ability { id: "2B5A", source: "Ifrit" }
+1211.7 "光柱 x6" Ability {"id":"2B82","source":"究极神兵"} duration 8
+1212.0 "寒风之歌" Ability {"id":"2B8E","source":"迦楼罗"}
+1212.6 "地火喷发 4" #Ability { id: "2B5A", source: "Ifrit" }
+1214.4 "飞翎雨 1" #Ability { id: "2B4D", source: "Garuda" }
+1216.0 "大龙卷风" Ability {"id":"2B41","source":"美翼"}
+1216.4 "飞翎雨 2" #Ability { id: "2B4D", source: "Garuda" }
+1216.8 "魔科学激光" Ability {"id":"2B8[456]","source":"究极神兵"}
+1221.0 "魔科学激光" Ability {"id":"2B8[456]","source":"究极神兵"}
+1224.3 "地裂 1" Ability {"id":"2B70","source":"泰坦"}
+1225.1 "魔科学激光" Ability {"id":"2B8[456]","source":"究极神兵"}
+1226.3 "地裂 2" Ability {"id":"2C22","source":"泰坦"}
+1227.1 "中高压" Ability {"id":"2B49","source":"迦楼罗"}
+1228.0 "烈焰碎击" Ability {"id":"2B5D","source":"伊弗利特"}
+1232.8 "飞翎雨" Ability {"id":"2B4D","source":"迦楼罗"}
+1233.2 "魔导核爆" Ability {"id":"2B87","source":"究极神兵"}
+1239.5 "--可选中--"
+1244.5 "究极" Ability {"id":"2B8B","source":"究极神兵"}
+1254.7 "以太波动" Ability {"id":"2B88","source":"究极神兵"}
+1275.9 "引爆吸附式炸弹" Ability {"id":"2B8F","source":"究极神兵"}
+1279.9 "召唤随机蛮神" #Ability { id: "2CD[345]", source: "The Ultima Weapon" }
+
+
+## Random Primal Finale (summon all three in random order)
+# Note: 2CD3/2CD4/2CD5 get used at other points in the fight so can't have big syncs.
+
+## Summon Garuda (random order)
+1300.0 "--同步化--" Ability {"id":"2CD3","source":"究极神兵"} window 50,300
+1307.2 "邪轮旋风" Ability {"id":"2B4E","source":"迦楼罗"}
+1308.4 "引爆吸附式炸弹" Ability {"id":"2B7A","source":"究极神兵"}
+1309.3 "邪气龙卷" Ability {"id":"2B4F","source":"伊弗利特"}
+1314.1 "大气爆发" Ability {"id":"2B55","source":"迦楼罗"}
+# ??? is this timing correct if Garuda is not last?
+1318.1 "召唤随机蛮神" #Ability { id: "2CD[345]", source: "The Ultima Weapon" }
+1321.8 "飞翎雨" Ability {"id":"2B4D","source":"迦楼罗"}
+
+
+## Summon Ifrit (random order)
+1400.0 "--同步化--" Ability {"id":"2CD4","source":"究极神兵"} window 150,300
+1407.2 "深红旋风" Ability {"id":"2B5F","source":"伊弗利特"}
+1407.2 "地火喷发" Ability {"id":"2B5A","source":"伊弗利特"}
+1408.5 "引爆吸附式炸弹" Ability {"id":"2B7A","source":"伊弗利特"}
+1415.2 "地狱之火炎" Ability {"id":"2B5E","source":"伊弗利特"}
+1420.1 "召唤随机蛮神" #Ability { id: "2CD[345]", source: "The Ultima Weapon" }
+
+## Summon Titan (random order)
+1500.0 "--同步化--" Ability {"id":"2CD5","source":"究极神兵"} window 250,300
+1505.1 "大地之重 1" Ability {"id":"2B65","source":"泰坦"}
+1508.1 "大地之重 2" Ability {"id":"2B65","source":"泰坦"}
+1508.8 "引爆吸附式炸弹" Ability {"id":"2B7A","source":"泰坦"}
+1511.1 "大地之重 3" Ability {"id":"2B65","source":"泰坦"}
+1514.2 "大地之怒" Ability {"id":"2B90","source":"泰坦"}
+1520.1 "召唤随机蛮神" #Ability { id: "2CD4", source: "The Ultima Weapon" }
+
+
+## Enrage
+1600.0 "狂暴" Ability {"id":"2B8C","source":"究极神兵"} window 400,0
+
+# FIXME: this waits until 100% aether, but unclear when that happens in the log.
+# The only indication is a 122 Damage Up ability 2 seconds before this.
+1625.0 "堡垒围攻 1" Ability {"id":"2B92"} window 30,0
+1628.0 "堡垒围攻 2" Ability {"id":"2B92"}
+1631.0 "堡垒围攻 3" Ability {"id":"2B92"}
+1634.0 "堡垒围攻 4" Ability {"id":"2B92"}
+1637.0 "堡垒围攻 5" Ability {"id":"2B92"}
+1640.0 "堡垒围攻 6" Ability {"id":"2B92"}
+1643.0 "堡垒围攻 7" Ability {"id":"2B92"}
+# Is this really 6 seconds on the last person?
+1649.0 "堡垒围攻 8" Ability {"id":"2B92"}
+1651.0 "Sabik 狂暴" Ability {"id":"2B93","source":"究极神兵"}

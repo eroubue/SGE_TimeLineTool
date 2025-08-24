@@ -1,0 +1,641 @@
+### Unending Coil of Bahamut (Ultimate)
+# http://clees.me/guides/ucob/
+# -ii 26A7 26B4 26D0 26C6 26C7 26DA 26D8 26AF 26F0 26F1
+# -p 26A8:7 26AD:108.5 26B8:407.3 26D1:1005.3 26E8:1503.6 26E9:2300
+
+hideall "--Reset--"
+hideall "--sync--"
+
+##### TWINTANIA #####
+### Twintania P1: 100% -> 75%
+# TODO: Twintania timeline has been updated to actually loop,
+# but the loops have not been verified against actual pulls.
+0.0 "--同步化--" InCombat {"inGameCombat":"1"} window 0,1
+6.5 "垂直下落" Ability {"id":"26A8","source":"双塔尼亚"} window 6.5,0.5
+7.4 label "p1-first-loop"
+12.6 "旋风" Ability {"id":"26AA","source":"双塔尼亚"}
+15.8 "火球" Ability {"id":"26AC","source":"双塔尼亚"}
+23.9 "死刑" Ability {"id":"26A9","source":"双塔尼亚"}
+27.0 "垂直下落" Ability {"id":"26A8","source":"双塔尼亚"} forcejump "p1-first-loop"
+# TODO: presumably the Twister at relative +5.2 is a loop back to the first Twister.
+
+### Twintania P2: 75% -> 45%
+# TODO: Switch this Neurolink detection to a `SpawnObject` log line from OP if we ever add it.
+# Neurolink spawn via `SpawnObject` packet, ID of `1E88FF`
+100.0 "--同步化--" CombatantMemory {"id":"40[0-9A-F]{6}","pair":[{"key":"BNpcID","value":"1E88FF"}]}', pair: [{ key: 'BNpcID', value: '1E88FF' }] } window 100,0
+103.4 label "p1-second-loop"
+108.5 "液体地狱 x5" Ability {"id":"26AD","source":"双塔尼亚"} duration 4.6 window 3,0.7
+117.3 "魔力炼成" Ability {"id":"26AE","source":"双塔尼亚"}
+120.6 "液体地狱 x5" Ability {"id":"26AD","source":"双塔尼亚"} duration 4.6 window 3,0.7
+132.3 "死刑" Ability {"id":"26A9","source":"双塔尼亚"}
+139.3 "魔力炼成" Ability {"id":"26AE","source":"双塔尼亚"}
+142.3 "旋风" Ability {"id":"26AA","source":"双塔尼亚"}
+148.3 "垂直下落" Ability {"id":"26A8","source":"双塔尼亚"} forcejump "p1-second-loop"
+# TODO: presumably the liquid hell at relative +5.1s is a loop back to the first liquid hell
+
+### Twintania P3: 45% -> 0%
+# Neurolink spawn via `SpawnObject` packet, ID of `1E88FF`
+200.0 "--同步化--" CombatantMemory {"id":"40[0-9A-F]{6}","pair":[{"key":"BNpcID","value":"1E88FF"}]}', pair: [{ key: 'BNpcID', value: '1E88FF' }] } window 95,0
+208.4 "液体地狱 x5" Ability {"id":"26AD","source":"双塔尼亚"} duration 4.6 window 3,0.7
+214.2 label "p1-third-loop"
+217.2 "魔力炼成 x2" Ability {"id":"26AE","source":"双塔尼亚"}
+220.4 "火球点名 x5" Ability {"id":"26AD","source":"双塔尼亚"} duration 4.6 window 3,0.7
+227.4 "火球" Ability {"id":"26AC","source":"双塔尼亚"} window 70,10
+236.4 "死刑" Ability {"id":"26A9","source":"双塔尼亚"}
+239.4 "垂直下落" Ability {"id":"26A8","source":"双塔尼亚"}
+246.4 "魔力炼成 x2" Ability {"id":"26AE","source":"双塔尼亚"}
+249.4 "旋风" Ability {"id":"26AA","source":"双塔尼亚"}
+254.4 "垂直下落" Ability {"id":"26A8","source":"双塔尼亚"}
+
+256.6 "液体地狱 x5" Ability {"id":"26AD","source":"双塔尼亚"} duration 4.6 window 3,0.7
+# TODO: presumably the Liquid Hell above is a loop back to the first liquid hell.
+# To avoid some jank with forcejump on a duration timeline entry, loop on the Generate cast that's after it instead
+262.5 "--同步化--" StartsUsing {"id":"26AE","source":"双塔尼亚"} forcejump "p1-third-loop"
+
+# Neurolink spawn via `SpawnObject` packet, ID of `1E88FF`
+400.0 "--同步化--" CombatantMemory {"id":"40[0-9A-F]{6}","pair":[{"key":"BNpcID","value":"1E88FF"}]}', pair: [{ key: 'BNpcID', value: '1E88FF' }] } window 400,0
+
+##### NAEL #####
+407.5 "天崩地裂" Ability {"id":"26B8","source":"诸神黄昏"} window 407.3,2
+413.0 "陨石流" Ability {"id":"26C0","source":"奈尔双生子"}
+414.5 "热离子爆发" Ability {"id":"26B9","source":"诸神黄昏"}
+416.1 "陨石流" Ability {"id":"26C0","source":"奈尔双生子"}
+418.6 "热离子爆发" Ability {"id":"26B9","source":"诸神黄昏"}
+419.1 "月华冲" Ability {"id":"26C1","source":"奈尔·神·达纳斯"}
+
+421.1 "--可选中--"
+421.2 "巴哈姆特之爪 x5" Ability {"id":"26B5","source":"奈尔·神·达纳斯"} duration 3.2 window 0.5,0.5
+430.2 "龙神的加护" Ability {"id":"26C2","source":"奈尔·神·达纳斯"}
+# Nael Quote 1
+# https://xivapi.com/NpcYell/6493?pretty=true
+# en: O hallowed moon, take fire and scorch my foes!
+# https://xivapi.com/NpcYell/6492?pretty=true
+# en: O hallowed moon, shine you the iron path!
+438.2 "--同步化--" NpcYell {"npcYellId":["195D","195C"]}
+443.2 "雷光链" Ability {"id":"26C8","source":"雷翼"}
+443.2 "月流电圈" Ability {"id":"26BC","source":"奈尔·神·达纳斯"}
+446.2 "钢铁战车/热离子光束" Ability {"id":["26BB","26BD"],"source":"奈尔·神·达纳斯"}
+446.9 "死亡宣告" Ability {"id":"26C9","source":"暗尾"}
+448.9 "火球 (1)" Ability {"id":"26C5","source":"火角"}
+449.9 "救世之翼 x2" Ability {"id":"26CA","source":"光牙"} duration 4
+457.3 "巴哈姆特之爪 x5" Ability {"id":"26B5","source":"奈尔·神·达纳斯"} duration 3.2 window 0.5,0.5
+464.0 "火球 (2)" Ability {"id":"26C5","source":"火角"}
+
+# Nael Quote 2
+# https://xivapi.com/NpcYell/6495?pretty=true
+# en: Take fire, O hallowed moon!
+# https://xivapi.com/NpcYell/6494?pretty=true
+# en: Blazing path, lead me to iron rule!
+466.3 "--同步化--" NpcYell {"npcYellId":["195F","195E"]}
+468.0 "雷光链" Ability {"id":"26C8","source":"雷翼"}
+471.3 "热离子光束" Ability {"id":"26BD","source":"奈尔·神·达纳斯"}
+474.3 "月流电圈/钢铁战车" Ability {"id":["26BB","26BC"],"source":"奈尔·神·达纳斯"}
+475.7 "死亡宣告" Ability {"id":"26C9","source":"暗尾"}
+477.7 "救世之翼 x3" Ability {"id":"26CA","source":"光牙"} duration 8
+486.8 "雷光链" Ability {"id":"26C8","source":"雷翼"}
+489.8 "火球 (3)" Ability {"id":"26C5","source":"火角"}
+
+493.2 "巴哈姆特之爪 x5" Ability {"id":"26B5","source":"奈尔·神·达纳斯"} duration 3.2 window 0.5,0.5
+
+# Nael Quote 3
+# https://xivapi.com/NpcYell/6497?pretty=true
+# en: From on high I descend, the hallowed moon to call!
+# https://xivapi.com/NpcYell/6496?pretty=true
+# en: From on high I descend, the iron path to walk!
+499.2 "--同步化--" NpcYell {"npcYellId":["1961","1960"]}
+504.5 "凶鸟冲" Ability {"id":"26BE","source":"奈尔·神·达纳斯"}
+507.5 "月流电圈/钢铁战车" Ability {"id":["26BB","26BC"],"source":"奈尔·神·达纳斯"}
+510.8 "火球 (4)" Ability {"id":"26C5","source":"火角"}
+511.5 "死亡宣告" Ability {"id":"26C9","source":"暗尾"}
+513.8 "雷光链" Ability {"id":"26C8","source":"雷翼"}
+513.9 "救世之翼 x3" Ability {"id":"26CA","source":"光牙"} duration 8
+532.4 "凶鸟尖喙" Ability {"id":"26B6","source":"奈尔·神·达纳斯"}
+
+# Nael Quote 4
+# https://xivapi.com/NpcYell/6500?pretty=true
+# en: Fleeting light! Amid a rain of stars, exalt you the red moon!
+537.6 "--同步化--" NpcYell {"npcYellId":"1964"} jump "p2-divebombs-q1"
+# https://xivapi.com/NpcYell/6501?pretty=true
+# en: Fleeting light! 'Neath the red moon, scorch you the earth!
+537.6 "--同步化--" NpcYell {"npcYellId":"1965"} jump "p2-divebombs-q2"
+# Previews
+537.6 "标记 1"
+541.6 "标记 2"
+542.8 "超新星 x4"
+545.6 "标记 3"
+548.9 "低温俯冲"
+
+# During Dalamud Dive, the boss goes untargetable. There's not a clear indicator in the network data
+# so I manually timed the untargetable duration as 5.467 seconds, +/-0.050 seconds of variance from pull to pull
+# The boss goes targetable the same server tick that the Dalamud Dive hit happens.
+
+600.0 label "p2-divebombs-q1"
+600.0 "标记 1" #HeadMarker { id: '0014' }
+604.0 "标记 2" HeadMarker {"id":"0014"}
+605.2 "超新星 x4" Ability {"id":"26BF","source":"奈尔·神·达纳斯"} duration 4.7 window 3,0.5
+608.0 "标记 3" HeadMarker {"id":"0014"}
+# "Cauterize" casts here don't have a sync since the ID order is random and they come two at the same time which can cause sync issues
+611.3 "低温俯冲"
+
+612.2 "--无法选中--"
+614.7 "陨石流" Ability {"id":"26C0","source":"奈尔双生子"}
+615.3 "低温俯冲" #Ability { id: ["26CB", "26CC", "26CD", "26CE", "26CF"], source: ["Firehorn", "Iceclaw", "Thunderwing", "Tail Of Darkness", "Fang Of Light"] }
+617.7 "--可选中--"
+617.7 "月华冲" Ability {"id":"26C1","source":"奈尔·神·达纳斯"}
+619.4 "低温俯冲" #Ability { id: ["26CB", "26CC", "26CD", "26CE", "26CF"], source: ["Firehorn", "Iceclaw", "Thunderwing", "Tail Of Darkness", "Fang Of Light"] }
+621.9 "巴哈姆特之爪 x5" Ability {"id":"26B5","source":"奈尔·神·达纳斯"} duration 3.2 window 0.5,0.5
+
+633.4 "--同步化--" NpcYell {"npcYellId":"195C"} forcejump "p2-post-divebombs-first-q1"
+633.4 "--同步化--" NpcYell {"npcYellId":"195D"} forcejump "p2-post-divebombs-first-q2"
+633.4 "--同步化--" NpcYell {"npcYellId":"195E"} forcejump "p2-post-divebombs-first-q3"
+633.4 "--同步化--" NpcYell {"npcYellId":"195F"} forcejump "p2-post-divebombs-first-q4"
+633.4 "--同步化--" NpcYell {"npcYellId":"1960"} forcejump "p2-post-divebombs-first-q5"
+633.4 "--同步化--" NpcYell {"npcYellId":"1961"} forcejump "p2-post-divebombs-first-q6"
+
+650.0 label "p2-divebombs-q2"
+650.0 "标记 1" #HeadMarker { id: '0014' }
+654.0 "标记 2" HeadMarker {"id":"0014"}
+655.2 "超新星 x4" Ability {"id":"26BF","source":"奈尔·神·达纳斯"} duration 4.7 window 3,0.5
+658.0 "标记 3" HeadMarker {"id":"0014"}
+659.2 "--无法选中--"
+661.3 "低温俯冲" #Ability { id: ["26CB", "26CC", "26CD", "26CE", "26CF"], source: ["Firehorn", "Iceclaw", "Thunderwing", "Tail Of Darkness", "Fang Of Light"] }
+
+664.7 "--可选中--"
+664.7 "月华冲" Ability {"id":"26C1","source":"奈尔·神·达纳斯"}
+665.3 "低温俯冲" #Ability { id: ["26CB", "26CC", "26CD", "26CE", "26CF"], source: ["Firehorn", "Iceclaw", "Thunderwing", "Tail Of Darkness", "Fang Of Light"] }
+666.9 "热离子光束" Ability {"id":"26BD","source":"奈尔·神·达纳斯"}
+669.4 "低温俯冲" #Ability { id: ["26CB", "26CC", "26CD", "26CE", "26CF"], source: ["Firehorn", "Iceclaw", "Thunderwing", "Tail Of Darkness", "Fang Of Light"] }
+671.9 "巴哈姆特之爪 x5" Ability {"id":"26B5","source":"奈尔·神·达纳斯"} duration 3.2 window 0.5,0.5
+
+683.9 "--同步化--" NpcYell {"npcYellId":"195C"} window 10,10 jump "p2-post-divebombs-first-q1"
+683.9 "--同步化--" NpcYell {"npcYellId":"195D"} window 10,10 jump "p2-post-divebombs-first-q2"
+683.9 "--同步化--" NpcYell {"npcYellId":"195E"} window 10,10 jump "p2-post-divebombs-first-q3"
+683.9 "--同步化--" NpcYell {"npcYellId":"195F"} window 10,10 jump "p2-post-divebombs-first-q4"
+683.9 "--同步化--" NpcYell {"npcYellId":"1960"} window 10,10 jump "p2-post-divebombs-first-q5"
+683.9 "--同步化--" NpcYell {"npcYellId":"1961"} window 10,10 jump "p2-post-divebombs-first-q6"
+
+# TODO: Are the quotes from divebombs possible here?
+# TODO: Timings for quotes here are copied from earlier in the fight.
+# Only q3 and q5 have been verified against an actual pull, but they synced up properly without adjustments
+
+720.0 label "p2-post-divebombs-first-q1"
+# https://xivapi.com/NpcYell/6492?pretty=true
+# en: O hallowed moon, shine you the iron path!
+720.0 "--同步化--" NpcYell {"npcYellId":"195C"}
+725.0 "月流电圈" Ability {"id":"26BC","source":"奈尔·神·达纳斯"}
+728.0 "钢铁战车" Ability {"id":"26BB","source":"奈尔·神·达纳斯"} forcejump "p2-post-divebombs-second"
+
+730.0 label "p2-post-divebombs-first-q2"
+# https://xivapi.com/NpcYell/6493?pretty=true
+# en: O hallowed moon, take fire and scorch my foes!
+730.0 "--同步化--" NpcYell {"npcYellId":"195D"}
+735.0 "月流电圈" Ability {"id":"26BC","source":"奈尔·神·达纳斯"}
+738.0 "热离子光束" Ability {"id":"26BD","source":"奈尔·神·达纳斯"} forcejump "p2-post-divebombs-second"
+
+740.0 label "p2-post-divebombs-first-q3"
+# https://xivapi.com/NpcYell/6494?pretty=true
+# en: Blazing path, lead me to iron rule!
+740.0 "--同步化--" NpcYell {"npcYellId":"195E"}
+745.0 "热离子光束" Ability {"id":"26BD","source":"奈尔·神·达纳斯"}
+748.0 "钢铁战车" Ability {"id":"26BB","source":"奈尔·神·达纳斯"} forcejump "p2-post-divebombs-second"
+
+750.0 label "p2-post-divebombs-first-q4"
+# https://xivapi.com/NpcYell/6495?pretty=true
+# en: Take fire, O hallowed moon!
+750.0 "--同步化--" NpcYell {"npcYellId":"195F"}
+755.0 "热离子光束" Ability {"id":"26BD","source":"奈尔·神·达纳斯"}
+758.0 "月流电圈" Ability {"id":"26BC","source":"奈尔·神·达纳斯"} forcejump "p2-post-divebombs-second"
+
+760.0 label "p2-post-divebombs-first-q5"
+# https://xivapi.com/NpcYell/6496?pretty=true
+# en: From on high I descend, the iron path to walk!
+760.0 "--同步化--" NpcYell {"npcYellId":"1960"}
+765.3 "凶鸟冲" Ability {"id":"26BE","source":"奈尔·神·达纳斯"}
+768.3 "钢铁战车" Ability {"id":"26BB","source":"奈尔·神·达纳斯"} forcejump "p2-post-divebombs-second"
+
+770.0 label "p2-post-divebombs-first-q6"
+# https://xivapi.com/NpcYell/6497?pretty=true
+# en: From on high I descend, the hallowed moon to call!
+770.0 "--同步化--" NpcYell {"npcYellId":"1961"}
+775.3 "凶鸟冲" Ability {"id":"26BE","source":"奈尔·神·达纳斯"}
+778.3 "月流电圈" Ability {"id":"26BC","source":"奈尔·神·达纳斯"} forcejump "p2-post-divebombs-second"
+
+800.0 label "p2-post-divebombs-second"
+803.0 "--同步化--" NpcYell {"npcYellId":"195C"} jump "p2-post-divebombs-second-q1"
+803.0 "--同步化--" NpcYell {"npcYellId":"195D"} jump "p2-post-divebombs-second-q2"
+803.0 "--同步化--" NpcYell {"npcYellId":"195E"} jump "p2-post-divebombs-second-q3"
+803.0 "--同步化--" NpcYell {"npcYellId":"195F"} jump "p2-post-divebombs-second-q4"
+803.0 "--同步化--" NpcYell {"npcYellId":"1960"} jump "p2-post-divebombs-second-q5"
+803.0 "--同步化--" NpcYell {"npcYellId":"1961"} jump "p2-post-divebombs-second-q6"
+
+850.0 label "p2-post-divebombs-second-q1"
+# https://xivapi.com/NpcYell/6492?pretty=true
+# en: O hallowed moon, shine you the iron path!
+850.0 "--同步化--" NpcYell {"npcYellId":"195C"}
+855.0 "月流电圈" Ability {"id":"26BC","source":"奈尔·神·达纳斯"}
+858.0 "钢铁战车" Ability {"id":"26BB","source":"奈尔·神·达纳斯"} forcejump "p2-post-divebombs-end"
+
+860.0 label "p2-post-divebombs-second-q2"
+# https://xivapi.com/NpcYell/6493?pretty=true
+# en: O hallowed moon, take fire and scorch my foes!
+860.0 "--同步化--" NpcYell {"npcYellId":"195D"}
+865.0 "月流电圈" Ability {"id":"26BC","source":"奈尔·神·达纳斯"}
+868.0 "热离子光束" Ability {"id":"26BD","source":"奈尔·神·达纳斯"} forcejump "p2-post-divebombs-end"
+
+870.0 label "p2-post-divebombs-second-q3"
+# https://xivapi.com/NpcYell/6494?pretty=true
+# en: Blazing path, lead me to iron rule!
+870.0 "--同步化--" NpcYell {"npcYellId":"195E"}
+875.0 "热离子光束" Ability {"id":"26BD","source":"奈尔·神·达纳斯"}
+878.0 "钢铁战车" Ability {"id":"26BB","source":"奈尔·神·达纳斯"} forcejump "p2-post-divebombs-end"
+
+880.0 label "p2-post-divebombs-second-q4"
+# https://xivapi.com/NpcYell/6495?pretty=true
+# en: Take fire, O hallowed moon!
+880.0 "--同步化--" NpcYell {"npcYellId":"195F"}
+885.0 "热离子光束" Ability {"id":"26BD","source":"奈尔·神·达纳斯"}
+888.0 "月流电圈" Ability {"id":"26BC","source":"奈尔·神·达纳斯"} forcejump "p2-post-divebombs-end"
+
+890.0 label "p2-post-divebombs-second-q5"
+# https://xivapi.com/NpcYell/6496?pretty=true
+# en: From on high I descend, the iron path to walk!
+890.0 "--同步化--" NpcYell {"npcYellId":"1960"}
+895.3 "凶鸟冲" Ability {"id":"26BE","source":"奈尔·神·达纳斯"}
+898.3 "钢铁战车" Ability {"id":"26BB","source":"奈尔·神·达纳斯"} forcejump "p2-post-divebombs-end"
+
+900.0 label "p2-post-divebombs-second-q6"
+# https://xivapi.com/NpcYell/6497?pretty=true
+# en: From on high I descend, the hallowed moon to call!
+900.0 "--同步化--" NpcYell {"npcYellId":"1961"}
+905.3 "凶鸟冲" Ability {"id":"26BE","source":"奈尔·神·达纳斯"}
+908.3 "月流电圈" Ability {"id":"26BC","source":"奈尔·神·达纳斯"} forcejump "p2-post-divebombs-end"
+
+940.0 label "p2-post-divebombs-end"
+
+948.3 "凶鸟尖喙" Ability {"id":"26B6","source":"奈尔·神·达纳斯"}
+955.3 "巴哈姆特之爪 x5" Ability {"id":"26B5","source":"奈尔·神·达纳斯"} duration 3.2 window 0.5,0.5
+962.8 "--无法选中--"
+967.8 "百万核爆 狂暴" Ability {"id":"26BA","source":"奈尔·神·达纳斯"}
+
+# Detect Nael going untargetable for phase change
+1000.0 "--同步化--" NameToggle {"name":"奈尔·神·达纳斯","toggle":"00"} window 1000,1
+
+# Backup sync based on arena background change (this happens at the same time weather changes)
+1001.2 "--同步化--" ActorControl {"command":"80000001","data0":"EE"} window 1001.2,1
+
+##### BAHAMUT #####
+1005.3 "第七灵灾" Ability {"id":"26D1","source":"至尊巴哈姆特"} window 1005.3,1
+1008.3 "灵灾之炎 x3" Ability {"id":"26D2","source":"至尊巴哈姆特"} duration 2 window 3,0.5
+1013.3 "灵灾之焰" Ability {"id":"26D3","source":"至尊巴哈姆特"}
+1016.3 "--可选中--"
+1022.3 "核爆吐息" Ability {"id":"26D4","source":"至尊巴哈姆特"}
+1030.3 "夷为平地" Ability {"id":"26D5","source":"至尊巴哈姆特"}
+
+### QUICKMARCH
+1037.3 "进军的三重奏" Ability {"id":"26E2","source":"至尊巴哈姆特"} window 30,10
+1039.3 "--无法选中--"
+#1045.6 "Megaflare Dive" Ability { id: "26E1", source: "Bahamut Prime" }
+#1045.6 "Lunar Dive" Ability { id: "26C3", source: "Nael deus Darnus" }
+1045.6 "旋风冲" Ability {"id":"26B2","source":"双塔尼亚"}
+1049.6 "分散" Ability {"id":"26DC","source":"至尊巴哈姆特"}
+1050.6 "--可选中--"
+1051.6 "大圈" Ability {"id":"26DD","source":"至尊巴哈姆特"}
+1053.6 "集合" Ability {"id":"26DE","source":"至尊巴哈姆特"}
+1055.9 "大地摇动" Ability {"id":"26D9","source":"至尊巴哈姆特"}
+1057.9 "风暴之翼" Ability {"id":"26D7","source":"至尊巴哈姆特"}
+
+1062.0 "核爆吐息" Ability {"id":"26D4","source":"至尊巴哈姆特"}
+1070.0 "夷为平地" Ability {"id":"26D5","source":"至尊巴哈姆特"}
+
+### BLACKFIRE
+1078.1 "黑炎的三重奏" Ability {"id":"26E3","source":"至尊巴哈姆特"} window 70,10
+1080.1 "--无法选中--"
+1082.1 "液体地狱 x5" duration 4.5 #Ability { id: "26AD", source: "Twintania" }
+1085.5 "热离子光束" Ability {"id":"26BD","source":"奈尔·神·达纳斯"}
+1086.5 "百万核爆冲" Ability {"id":"26E1","source":"至尊巴哈姆特"}
+1092.6 "超新星 x4" Ability {"id":"26BF","source":"奈尔·神·达纳斯"} duration 4.7 window 3,0.5
+1094.5 "集合" Ability {"id":"26DE","source":"至尊巴哈姆特"}
+1096.5 "塔" Ability {"id":"26DF","source":"至尊巴哈姆特"}
+
+1096.5 "--可选中--"
+1102.8 "十亿核爆" Ability {"id":"26D6","source":"至尊巴哈姆特"}
+1111.8 "核爆吐息 1" #Ability { id: "26D4", source: "Bahamut Prime" }
+1113.8 "核爆吐息 2" #Ability { id: "26D4", source: "Bahamut Prime" }
+1115.8 "核爆吐息 3" #Ability { id: "26D4", source: "Bahamut Prime" }
+
+### FELLRUIN
+1129.3 "灾厄的三重奏" Ability {"id":"26E4","source":"至尊巴哈姆特"} window 130,10
+1131.3 "--无法选中--"
+1138.7 "月流电圈/凶鸟冲" Ability {"id":["26BC","26BE"],"source":"奈尔·神·达纳斯"}
+1141.7 "凶鸟冲/月流电圈" Ability {"id":["26BE","26BC"],"source":"奈尔·神·达纳斯"}
+1144.7 "风暴之翼" Ability {"id":"26D7","source":"至尊巴哈姆特"}
+1145.7 "以太失控" Ability {"id":"26B1","source":"双塔尼亚"}
+
+1147.7 "--可选中--"
+1149.0 "陨石流" Ability {"id":"26C0","source":"奈尔双生子"}
+1153.8 "十亿核爆" Ability {"id":"26D6","source":"至尊巴哈姆特"}
+1159.1 "核爆吐息" Ability {"id":"26D4","source":"至尊巴哈姆特"}
+1168.1 "夷为平地" Ability {"id":"26D5","source":"至尊巴哈姆特"}
+1173.1 "核爆吐息" Ability {"id":"26D4","source":"至尊巴哈姆特"}
+
+#### HEAVENSFALL
+1181.1 "天地的三重奏" Ability {"id":"26E5","source":"至尊巴哈姆特"} window 170,10
+1183.1 "--无法选中--"
+#1189.5 "Megaflare Dive" Ability { id: "26E1", source: "Bahamut Prime" }
+1189.5 "旋风冲" Ability {"id":"26B2","source":"双塔尼亚"}
+1195.0 "天崩地裂" Ability {"id":"26B7","source":"奈尔·神·达纳斯"}
+1195.5 "大圈" Ability {"id":"26DD","source":"至尊巴哈姆特"}
+1197.0 "天崩地裂" Ability {"id":"26B8","source":"诸神黄昏"}
+1199.5 "塔" Ability {"id":"26DF","source":"至尊巴哈姆特"}
+1202.6 "超新星 x3" Ability {"id":"26BF","source":"奈尔·神·达纳斯"} duration 3.2 window 3,0.5
+1204.1 "热离子爆发 x8" duration 5 #Ability { id: "26B9", source: "Ragnarok" }
+
+1210.6 "--可选中--"
+1211.8 "火球" Ability {"id":"26AC","source":"双塔尼亚"}
+1216.8 "十亿核爆" Ability {"id":"26D6","source":"至尊巴哈姆特"}
+1225.8 "核爆吐息 1" #Ability { id: "26D4", source: "Bahamut Prime" }
+1227.8 "核爆吐息 2" #Ability { id: "26D4", source: "Bahamut Prime" }
+1229.8 "核爆吐息 3" #Ability { id: "26D4", source: "Bahamut Prime" }
+
+### TENSTRIKE
+1242.3 "连击的三重奏" Ability {"id":"26E6","source":"至尊巴哈姆特"} window 200,10
+1244.3 "--无法选中--"
+1249.6 "魔力炼成 x3" Ability {"id":"26AE","source":"双塔尼亚"}
+1250.6 "陨石流 (DPS)" duration 4 #Ability { id: "26C0", source: "Nael Geminus" }
+1253.6 "魔力炼成 x3" Ability {"id":"26AE","source":"双塔尼亚"}
+1254.6 "陨石流 (T/H)" duration 4 #Ability { id: "26C0", source: "Nael Geminus" }
+1263.5 "--可选中--"
+1263.5 "大地摇动" Ability {"id":"26D9","source":"至尊巴哈姆特"}
+1268.5 "大地摇动" Ability {"id":"26D9","source":"至尊巴哈姆特"}
+
+1276.5 "十亿核爆" Ability {"id":"26D6","source":"至尊巴哈姆特"}
+1287.5 "夷为平地" Ability {"id":"26D5","source":"至尊巴哈姆特"}
+1290.5 "核爆吐息" Ability {"id":"26D4","source":"至尊巴哈姆特"}
+
+### GRAND OCTET
+1298.5 "群龙的八重奏" Ability {"id":"26E7","source":"至尊巴哈姆特"} window 200,10
+1300.5 "--无法选中--"
+1306.5 "奈尔标记"
+1310.9 "月流冲 1" Ability {"id":"26C3","source":"奈尔·神·达纳斯"}
+1317.9 "低温俯冲 2" #Ability { id: "26CB", source: "Firehorn" }
+1320.1 "低温俯冲 3" #Ability { id: "26CC", source: "Iceclaw" }
+1322.1 "低温俯冲 4" #Ability { id: "26CF", source: "Fang Of Light" }
+1323.9 "巴哈标记"
+1324.1 "低温俯冲 5" #Ability { id: "26CD", source: "Thunderwing" }
+1326.1 "低温俯冲 6" #Ability { id: "26CE", source: "Tail Of Darkness" }
+1328.1 "百万核爆冲 7" Ability {"id":"26E1","source":"至尊巴哈姆特"}
+1332.9 "双塔标记"
+1335.9 "集合" Ability {"id":"26DE","source":"至尊巴哈姆特"}
+1337.0 "旋风冲 8" Ability {"id":"26B2","source":"双塔尼亚"}
+1337.8 "塔" Ability {"id":"26DF","source":"至尊巴哈姆特"} forcejump "adds-phase-jump"
+
+1488.5 label "adds-phase-jump"
+# https://xivapi.com/InstanceContentTextData/18100
+# en: O Bahamut! We shall stand guard as you make ready your divine judgment!
+1500.0 "--同步化--" BattleTalk2 {"npcNameId":"0A34","instanceContentTextId":"46B4"} window 1500,0
+
+# 2019-11-04T19:22:00.3700000-08:00 - favor
+##### ADDS PHASE: NAEL + TWIN #####
+1503.6 "龙神的加护" Ability {"id":"26E8","source":"至尊巴哈姆特"} window 1500,3
+1505.1 "--可选中--"
+1513.1 "巴哈姆特之爪 x5" Ability {"id":"26B5","source":"奈尔·神·达纳斯"} duration 3.2 window 0.5,0.5
+1513.1 "垂直下落" #Ability { id: "26A8", source: "Twintania" }
+
+1516.2 "液体地狱 x5" duration 4.5 #Ability { id: "26AD", source: "Twintania" }
+1525.2 "魔力炼成 x3" Ability {"id":"26AE","source":"双塔尼亚"}
+1529.3 "旋风" Ability {"id":"26AA","source":"双塔尼亚"}
+
+# Triple Nael Quote
+# https://xivapi.com/NpcYell/6504?pretty=true
+# en: Unbending iron,\n\ntake fire and descend!
+1532.0 "--同步化--" NpcYell {"npcYellId":"1968"} jump "adds-phase-q1-1"
+# https://xivapi.com/NpcYell/6505?pretty=true
+# en: Unbending iron,\n\ndescend with fiery edge!
+1532.0 "--同步化--" NpcYell {"npcYellId":"1969"} jump "adds-phase-q1-2"
+# https://xivapi.com/NpcYell/6506?pretty=true
+# en: From hallowed moon I descend,\n\nupon burning earth to tread!
+1532.0 "--同步化--" NpcYell {"npcYellId":"196A"} jump "adds-phase-q1-3"
+# https://xivapi.com/NpcYell/6507?pretty=true
+# en: From hallowed moon I bare iron,\n\nin my descent to wield!
+1532.0 "--同步化--" NpcYell {"npcYellId":"196B"} jump "adds-phase-q1-4"
+# Preview timings
+1536.7 "月流电圈/钢铁战车"
+1539.7 "凶鸟冲/钢铁战车/热离子光束"
+1542.8 "凶鸟冲/热离子光束"
+
+# First triple Nael quote, first iteration, chariot -> beam -> dive
+1600.0 label "adds-phase-q1-1"
+1605.1 "钢铁战车" Ability {"id":"26BB","source":"奈尔·神·达纳斯"}
+1608.1 "热离子光束" Ability {"id":"26BD","source":"奈尔·神·达纳斯"}
+1611.3 "凶鸟冲" Ability {"id":"26BE","source":"奈尔·神·达纳斯"} forcejump "adds-phase-middle-chariot"
+
+# First triple Nael quote, second iteration, chariot -> dive -> beam
+1650.0 label "adds-phase-q1-2"
+1655.1 "钢铁战车" Ability {"id":"26BB","source":"奈尔·神·达纳斯"}
+1658.1 "凶鸟冲" Ability {"id":"26BE","source":"奈尔·神·达纳斯"}
+1661.3 "热离子光束" Ability {"id":"26BD","source":"奈尔·神·达纳斯"} forcejump "adds-phase-middle-chariot"
+
+# First triple Nael quote, third iteration, dynamo -> dive -> beam
+1700.0 label "adds-phase-q1-3"
+1705.1 "月流电圈" Ability {"id":"26BC","source":"奈尔·神·达纳斯"}
+1708.1 "凶鸟冲" Ability {"id":"26BE","source":"奈尔·神·达纳斯"}
+1711.3 "热离子光束" Ability {"id":"26BD","source":"奈尔·神·达纳斯"} forcejump "adds-phase-middle-dynamo"
+
+# First triple Nael quote, fourth iteration, dynamo -> chariot -> dive
+1750.0 label "adds-phase-q1-4"
+1755.1 "月流电圈" Ability {"id":"26BC","source":"奈尔·神·达纳斯"}
+1758.1 "钢铁战车" Ability {"id":"26BB","source":"奈尔·神·达纳斯"}
+1761.3 "凶鸟冲" Ability {"id":"26BE","source":"奈尔·神·达纳斯"} forcejump "adds-phase-middle-dynamo"
+
+1800.0 label "adds-phase-middle-chariot"
+1803.1 "旋风" Ability {"id":"26AA","source":"双塔尼亚"}
+
+1814.1 "百万核爆" Ability {"id":"26BA","source":"奈尔·神·达纳斯"}
+1822.2 "死刑" Ability {"id":"26A9","source":"双塔尼亚"}
+1822.2 "凶鸟尖喙" #Ability { id: "26B6", source: "Nael deus Darnus" }
+1826.2 "垂直下落" #Ability { id: "26A8", source: "Twintania" }
+1826.2 "巴哈姆特之爪 x5" Ability {"id":"26B5","source":"奈尔·神·达纳斯"} duration 3.2 window 0.5,0.5
+
+1835.3 "液体地狱 x5" duration 4.5 #Ability { id: "26AD", source: "Twintania" }
+1844.3 "魔力炼成 x3" Ability {"id":"26AE","source":"双塔尼亚"}
+1848.5 "旋风" Ability {"id":"26AA","source":"双塔尼亚"}
+# Triple Nael Quote
+# https://xivapi.com/NpcYell/6506?pretty=true
+# en: From hallowed moon I descend,\n\nupon burning earth to tread!
+1851.3 "--同步化--" NpcYell {"npcYellId":"196A"} jump "adds-phase-q2-3"
+# https://xivapi.com/NpcYell/6507?pretty=true
+# en: From hallowed moon I bare iron,\n\nin my descent to wield!
+1851.3 "--同步化--" NpcYell {"npcYellId":"196B"} jump "adds-phase-q2-4"
+# Preview timings
+1856.0 "月流电圈"
+1859.0 "凶鸟冲/钢铁战车"
+1862.1 "凶鸟冲/热离子光束"
+
+1900.0 label "adds-phase-middle-dynamo"
+1903.1 "旋风" Ability {"id":"26AA","source":"双塔尼亚"}
+
+1914.1 "百万核爆" Ability {"id":"26BA","source":"奈尔·神·达纳斯"}
+1922.2 "死刑" Ability {"id":"26A9","source":"双塔尼亚"}
+1922.2 "凶鸟尖喙" #Ability { id: "26B6", source: "Nael deus Darnus" }
+1926.2 "垂直下落" #Ability { id: "26A8", source: "Twintania" }
+1926.2 "巴哈姆特之爪 x5" Ability {"id":"26B5","source":"奈尔·神·达纳斯"} duration 3.2 window 0.5,0.5
+
+1935.3 "液体地狱 x5" duration 4.5 #Ability { id: "26AD", source: "Twintania" }
+1944.3 "魔力炼成 x3" Ability {"id":"26AE","source":"双塔尼亚"}
+1948.5 "旋风" Ability {"id":"26AA","source":"双塔尼亚"}
+# Triple Nael Quote
+# https://xivapi.com/NpcYell/6504?pretty=true
+# en: Unbending iron,\n\ntake fire and descend!
+1951.3 "--同步化--" NpcYell {"npcYellId":"1968"} jump "adds-phase-q2-1"
+# https://xivapi.com/NpcYell/6505?pretty=true
+# en: Unbending iron,\n\ndescend with fiery edge!
+1951.3 "--同步化--" NpcYell {"npcYellId":"1969"} jump "adds-phase-q2-2"
+# Preview timings
+1956.0 "钢铁战车"
+1959.0 "凶鸟冲/热离子光束"
+1962.1 "凶鸟冲/热离子光束"
+
+# Second triple Nael quote, first iteration, chariot -> beam -> dive
+2000.0 label "adds-phase-q2-1"
+2005.1 "钢铁战车" Ability {"id":"26BB","source":"奈尔·神·达纳斯"}
+2008.1 "热离子光束" Ability {"id":"26BD","source":"奈尔·神·达纳斯"}
+2011.3 "凶鸟冲" Ability {"id":"26BE","source":"奈尔·神·达纳斯"} forcejump "adds-phase-end"
+
+# Second triple Nael quote, second iteration, chariot -> dive -> beam
+2050.0 label "adds-phase-q2-2"
+2055.1 "钢铁战车" Ability {"id":"26BB","source":"奈尔·神·达纳斯"}
+2058.1 "凶鸟冲" Ability {"id":"26BE","source":"奈尔·神·达纳斯"}
+2061.3 "热离子光束" Ability {"id":"26BD","source":"奈尔·神·达纳斯"} forcejump "adds-phase-end"
+
+# Second triple Nael quote, third iteration, dynamo -> dive -> beam
+2100.0 label "adds-phase-q2-3"
+2105.1 "月流电圈" Ability {"id":"26BC","source":"奈尔·神·达纳斯"}
+2108.1 "凶鸟冲" Ability {"id":"26BE","source":"奈尔·神·达纳斯"}
+2111.3 "热离子光束" Ability {"id":"26BD","source":"奈尔·神·达纳斯"} forcejump "adds-phase-end"
+
+# Second triple Nael quote, fourth iteration, dynamo -> chariot -> dive
+2150.0 label "adds-phase-q2-4"
+2155.1 "月流电圈" Ability {"id":"26BC","source":"奈尔·神·达纳斯"}
+2158.1 "钢铁战车" Ability {"id":"26BB","source":"奈尔·神·达纳斯"}
+2161.3 "凶鸟冲" Ability {"id":"26BE","source":"奈尔·神·达纳斯"} forcejump "adds-phase-end"
+
+2200.0 label "adds-phase-end"
+
+2203.0 "旋风" Ability {"id":"26AA","source":"双塔尼亚"}
+
+2215.2 "死刑" Ability {"id":"26A9","source":"双塔尼亚"}
+2215.8 "凶鸟尖喙" #Ability { id: "26B6", source: "Nael deus Darnus" }
+2228.1 "百万核爆" Ability {"id":"26BA","source":"奈尔·神·达纳斯"}
+2239.1 "狂暴" # ???
+
+# https://xivapi.com/InstanceContentTextData/18101
+# en: Ugh... None shall defy Lord Bahamut's will! On your knees, vermin!
+2300.0 "--同步化--" BattleTalk2 {"npcNameId":"0A34","instanceContentTextId":"46B5"} window 2300,0
+
+##### GOLDEN BAHAMUT #####
+2316.2 "万亿核爆" Ability {"id":"26E9","source":"至尊巴哈姆特"} window 2300,0
+2341.3 "转生之炎" #Ability { id: "26F2", source: "Phoenix" }
+2347.1 "--同步化--" Ability {"id":"2707","source":"至尊巴哈姆特"} window 30,30 # Glowing ball
+2361.2 "--可选中--"
+2367.2 "无尽顿悟 #1" Ability {"id":"26EC","source":"至尊巴哈姆特"}
+2373.3 "死亡轮回 #1" Ability {"id":"26EA","source":"至尊巴哈姆特"} duration 3.3
+2385.8 "百京核爆 #1" Ability {"id":"26EF","source":"至尊巴哈姆特"} duration 14.7 window 10,10
+2405.0 "死亡轮回 #2" Ability {"id":"26EA","source":"至尊巴哈姆特"} duration 4.4
+2422.5 "无尽顿悟 #2" Ability {"id":"26EC","source":"至尊巴哈姆特"}
+2434.6 "百京核爆 #2" Ability {"id":"26EF","source":"至尊巴哈姆特"} duration 14.7 window 10,10
+2455.8 "无尽顿悟 #3" Ability {"id":"26EC","source":"至尊巴哈姆特"}
+2467.9 "死亡轮回 #3" Ability {"id":"26EA","source":"至尊巴哈姆特"} duration 5.5
+2484.3 "百京核爆 #3" Ability {"id":"26EF","source":"至尊巴哈姆特"} duration 14.7 window 10,10
+2505.5 "无尽顿悟 #4" Ability {"id":"26EC","source":"至尊巴哈姆特"}
+2517.6 "死亡轮回 #4" Ability {"id":"26EA","source":"至尊巴哈姆特"} duration 6.6
+2535.1 "百京核爆 #4" Ability {"id":"26EF","source":"至尊巴哈姆特"} duration 14.7 window 10,10
+2556.2 "无尽顿悟 #5" Ability {"id":"26EC","source":"至尊巴哈姆特"}
+2568.3 "无尽顿悟 狂暴 1" Ability {"id":"26ED","source":"至尊巴哈姆特"}
+2570.5 "无尽顿悟 狂暴 2" #Ability { id: "26EE", source: "Bahamut Prime" }
+2571.8 "无尽顿悟 狂暴 3" #Ability { id: "26EE", source: "Bahamut Prime" }
+2573.1 "无尽顿悟 狂暴 4" #Ability { id: "26EE", source: "Bahamut Prime" }
+2574.4 "无尽顿悟 狂暴 5" #Ability { id: "26EE", source: "Bahamut Prime" }
+2575.7 "无尽顿悟 狂暴 6" #Ability { id: "26EE", source: "Bahamut Prime" }
+2577.0 "无尽顿悟 狂暴 7" #Ability { id: "26EE", source: "Bahamut Prime" }
+2578.3 "无尽顿悟 狂暴 8" #Ability { id: "26EE", source: "Bahamut Prime" }
+
+# victory ezpz
+
+# ALL ENCOUNTER ABILITIES
+# 26A7 --sync--: Twintania autoattack
+# 26A8 Plummet: Twintania cleave buster
+# 26A9 Death Sentence: Twintania single target debuff buster
+# 26AA Twister: Twintania twister castbar
+# 26AB Twister: Twintania twister detonation, also corresponds to Twisting Dive twisters
+# 26AC Fireball: Twintania fireball stack
+# 26AD Liquid Hell: Twintania fire puddle baits, both the "far" bait and the "targeted" bait
+# 26AE Generate: Twintania cast bar to spawn "Oviform" eggs
+# 26AF Hatch: Successful soaking of "Oviform" egg in neurolink
+# 26B0 Deep Hatch: Soaking "Oviform" egg outside of neurolink, or not soaking in time causing the egg to expire
+# 26B1 Aetheric Profusion: Twintania massive raid damage aoe during Fellruin Trio, soaked in neurolink
+# 26B2 Twisting Dive: Twintania dives during P2, spawns twisters
+# 26B3 Twin Fury: ???TODO: Twintania Enrage for P1 maybe???
+# 26B4 --sync--: Nael autoattack
+# 26B5 Bahamut's Claw: Nael 5-hit tankbuster
+# 26B6 Ravensbeak: Nael single target debuff buster
+# 26B7 Heavensfall: Nael Heavensfall Trio middle tower spawn castbar
+# 26B8 Heavensfall: P1 -> P2 transition Heavensfall tower damage + knockback, also re-used in Heavensfall Trio
+# 26B9 Thermionic Burst: Heavensfall tower pizza slices, used in P1 -> P2 transition and in Heavensfall Trio
+# 26BA Megaflare: Nael raidwide damage during adds phase. TODO: Also listed as P2 enrage castbar in original timeline but that might be incorrect
+# 26BB Iron Chariot: Nael point-blank aoe with knockback, killer of many a greedy melee
+# 26BC Lunar Dynamo: Nael doughnut aoe
+# 26BD Thermionic Beam: Nael party stack
+# 26BE Raven Dive: Nael jump on random player
+# 26BF Hypernova: Nael bleed puddles
+# 26C0 Meteor Stream: Nael targeted AoEs/spreads
+# 26C1 Dalamud Dive: Nael initial dive at start of P2
+# 26C2 Bahamut's Favor: Nael damage buff
+# 26C3 Lunar Dive: Nael dives during P3
+# 26C4 White Fury: ???TODO: Nael Enrage for P2 maybe???
+# 26C5 Fireball: Nael fire stack
+# 26C6 Iceball: Nael adds ice
+# 26C7 Chain Lightning: Nael adds chain lightning detonation
+# 26C8 Chain Lightning: Nael adds chain lightning cast, gives debuff
+# 26C9 Deathstorm: Nael adds, gives doom
+# 26CA Wings of Salvation: Nael adds, spawns light puddle
+# 26CB Cauterize: Nael/Bahamut phase Firehorn add dive
+# 26CC Cauterize: Nael/Bahamut phase Iceclaw add dive
+# 26CD Cauterize: Nael/Bahamut phase Thunderwing add dive
+# 26CE Cauterize: Nael/Bahamut phase Tail Of Darkness add dive
+# 26CF Cauterize: Nael/Bahamut phase Fang Of Light add dive
+# 26D0 --sync--: Bahamut autoattack
+# 26D1 Seventh Umbral Era: P2 -> P3 phase transition fireball drop/knockback
+# 26D2 Calamitous Flame: P2 -> P3 phase transition small damage hits
+# 26D3 Calamitous Blaze: P2 -> P3 phase transition big damage hit
+# 26D4 Flare Breath: Bahamut weak aoe tankbuster
+# 26D5 Flatten: Bahamut strong aoe tankbuster
+# 26D6 Gigaflare: Bahamut raidwide damage
+# 26D7 Tempest Wing: Bahamut tankbuster tether hit
+# 26D8 Tempest Wing: Bahamut tankbuster tether spawn
+# 26D9 Earth Shaker: Bahamut earthshaker cast
+# 26DA Earth Shaker: Bahamut earthshaker hit
+# 26DB Megaflare
+# 26DC Megaflare: Spreads during QMT
+# 26DD Megaflare: "Pepperoni" floor AoEs during Bahamut phase
+# 26DE Megaflare: Stacks during Bahamut
+# 26DF Megaflare: Towers during Bahamut
+# 26E0 Megaflare Strike: Tower missed during Bahamut
+# 26E1 Megaflare Dive: Bahamut dive
+# 26E2 Quickmarch Trio: P3
+# 26E3 Blackfire Trio: P3
+# 26E4 Fellruin Trio: P3
+# 26E5 Heavensfall Trio: P3
+# 26E6 Tenstrike Trio: P3
+# 26E7 Grand Octet: P3. Can't believe they'd break the naming scheme by not calling this "Grand Trio" or something...
+# 26E8 Bahamut's Favor: Adds phase, damage up on Twintania
+# 26E9 Teraflare: P4 -> P5 transition "party wipe" damage
+# 26EA Akh Morn: P5 tankbuster castbar/initial hit
+# 26EB Akh Morn: P5 tankbuster follow up hits
+# 26EC Morn Afah: P5 party stack
+# 26ED Morn Afah: P5 enrage cast/initial hit
+# 26EE Morn Afah: P5 enrage follow up hits
+# 26EF Exaflare: P5 Exaflare castbar
+# 26F0 Exaflare: P5 Exaflare initial position telegraph
+# 26F1 Exaflare: P5 Exaflare follow up hits
+# 26F2 Flames of Rebirth: P4 -> P5 transition Phoenix party rez, damage up buff, etc
+# 2707 --sync--: P4 -> P5 transition "glowing ball" effect

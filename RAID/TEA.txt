@@ -1,0 +1,254 @@
+
+# The Epic of Alexander (Ultimate)
+# https://clees.me/guides/tea/
+# -p 49B0:11.4 4830:200 -ii 4978 4979 497B 497A 481E 4B4E 4820
+
+hideall "--Reset--"
+hideall "--sync--"
+
+### Phase 1: Living Liquid
+0 "Start"
+0.0 "--同步化--" InCombat {"inGameCombat":"1"} window 0,1
+11.4 "流体摆动" Ability {"id":"49B0","source":"有生命活水"} window 10,2.5
+19.5 "倾泻" Ability {"id":"4826","source":"有生命活水"}
+35.8 "祈祷之手/离别之手" Ability {"id":"482[BC]","source":"活水之手"}
+36.7 "活水之怒 1" Ability {"id":"49B5","source":"活水之怒"}
+37.7 "流体摆动" Ability {"id":"49B0","source":"有生命活水"}
+37.7 "流体强袭" #Ability { id: "49B7", source: "Liquid Hand" }
+38.7 "活水之怒 2" Ability {"id":"49B6","source":"活水之怒"}
+39.7 "污染蒸汽" Ability {"id":"481E","source":"狩猎人偶"}
+41.6 "栓塞" Ability {"id":"4829","source":"活水之怒"}
+42.8 "苦痛之手" Ability {"id":"482D","source":"活水之手"}
+50.3 "污染蒸汽" Ability {"id":"481E","source":"狩猎人偶"}
+56.7 "流体摆动" Ability {"id":"49B0","source":"有生命活水"}
+56.7 "流体强袭" #Ability { id: "49B7", source: "Liquid Hand" }
+69.8 "万变水波 1" Ability {"id":"4822","source":"有生命活水"}
+70.0 "苦痛之手" Ability {"id":"482D","source":"活水之手"}
+71.9 "万变水波 2" Ability {"id":"4823","source":"有生命活水"}
+74.9 "冲洗" Ability {"id":"49B1","source":"有生命活水"}
+75.0 "万变水波 3" Ability {"id":"4823","source":"有生命活水"}
+81.1 "溅开 x6" duration 5.6
+86.6 "排水" Ability {"id":"4827","source":"活水之怒"}
+89.1 "苦痛之手" Ability {"id":"482D","source":"活水之手"}
+91.7 "倾泻" Ability {"id":"4826","source":"有生命活水"}
+95.9 "窒息" Ability {"id":"4828","source":"活水之怒"}
+107.0 "万变水波 1" Ability {"id":"4822","source":"有生命活水"}
+109.0 "苦痛之手" Ability {"id":"482D","source":"活水之手"}
+109.1 "万变水波 2" Ability {"id":"4823","source":"有生命活水"}
+112.0 "冲洗" Ability {"id":"49B1","source":"有生命活水"}
+112.1 "万变水波 3" Ability {"id":"4823","source":"有生命活水"}
+113.0 "活水之怒 1" Ability {"id":"49B5","source":"活水之怒 "}
+115.1 "活水之怒 2" Ability {"id":"49B6","source":"活水之怒"}
+119.1 "栓塞" Ability {"id":"4829","source":"活水之怒"}
+124.2 "祈祷之手/离别之手" Ability {"id":"482[BC]","source":"活水之手"}
+127.4 "溅开 x6" duration 5.6
+129.3 "苦痛之手" Ability {"id":"482D","source":"活水之手"}
+134.1 "流体摆动" Ability {"id":"49B0","source":"有生命活水"}
+142.1 "倾泻 狂暴" Ability {"id":"49B3","source":"有生命活水"}
+
+### Transition 1: Cruise Chaser
+196.0 "--同步化--" RemovedCombatant {"name":"活水之手"} window 50,0
+200.0 "鹰式破坏炮 1" Ability {"id":"4830","source":"巡航驱逐者"} window 200,0
+202.2 "鹰式破坏炮 2"
+204.4 "鹰式破坏炮 3"
+206.6 "鹰式破坏炮 4"
+207.4 "#1 阿尔法之剑" Ability {"id":"4834","source":"巡航驱逐者"}
+208.8 "中间冲击波"
+208.9 "#2 超级摧毁者冲击" Ability {"id":"4B4F","source":"巡航驱逐者"}
+211.0 "鹰式破坏炮 1"
+212.1 "#3 阿尔法之剑" Ability {"id":"4834","source":"巡航驱逐者"}
+213.2 "鹰式破坏炮 2"
+213.6 "#4 超级摧毁者冲击" Ability {"id":"4B4F","source":"巡航驱逐者"}
+215.5 "鹰式破坏炮 3"
+216.8 "#5 阿尔法之剑" Ability {"id":"4834","source":"巡航驱逐者"}
+217.7 "鹰式破坏炮 4"
+218.3 "#6 超级摧毁者冲击" Ability {"id":"4B4F","source":"巡航驱逐者"}
+219.9 "中间冲击波"
+221.4 "#7 阿尔法之剑" Ability {"id":"4834","source":"巡航驱逐者"}
+222.9 "#8 超级摧毁者冲击" Ability {"id":"4B4F","source":"巡航驱逐者"}
+
+### Phase 2: Cruise Chaser and Brute Justice
+226.1 "正义飞踢" Ability {"id":"4854","source":"残暴正义号"} window 250,5
+229.1 "--可选中--"
+238.3 "龙卷风" Ability {"id":"49C2","source":"巡航驱逐者"}
+241.3 "非最终审判" Ability {"id":"483E","source":"残暴正义号"}
+247.4 "系统连接" Ability {"id":"483F","source":"残暴正义号"}
+255.4 "制导" Ability {"id":"482F","source":"巡航驱逐者"}
+256.2 "飞轮" Ability {"id":"4855","source":"蒸汽战轮"}
+260.6 "鹰式破坏炮" Ability {"id":"4831","source":"巡航驱逐者"}
+262.5 "光子炮" Ability {"id":"4836","source":"巡航驱逐者"}
+272.7 "回旋碎踢" Ability {"id":"4A72","source":"巡航驱逐者"}
+277.3 "水 雷" Ability {"id":"4841","source":"残暴正义号"}
+288.6 "寒冰导弹" Ability {"id":"484E","source":"残暴正义号"}
+290.6 "隐形地雷散布" Ability {"id":"4851","source":"残暴正义号"}
+292.7 "计数" Ability {"id":"4850","source":"残暴正义号"}
+306.7 "水 雷" Ability {"id":"4841","source":"残暴正义号"}
+313.5 "限制器减档" Ability {"id":"4833","source":"巡航驱逐者"}
+314.1 "--巡航驱逐者无敌--" duration 6.3
+315.5 "大火炎放射" Ability {"id":"4845","source":"残暴正义号"}
+327.6 "龙卷风" Ability {"id":"49C2","source":"巡航驱逐者"}
+336.2 "水 雷" Ability {"id":"4841","source":"残暴正义号"}
+354.5 "螺旋桨强风" Ability {"id":"4832","source":"巡航驱逐者"}
+356.5 "终审闭庭" Ability {"id":"483C","source":"残暴正义号"}
+366.8 "光子炮" Ability {"id":"4836","source":"巡航驱逐者"}
+374.8 "双重火箭飞拳" Ability {"id":"4847","source":"残暴正义号"}
+382.1 "超级跳跃" Ability {"id":"484A","source":"残暴正义号"}
+384.4 "末世宣言 x5" duration 4.4
+395.0 "龙卷风" Ability {"id":"49C2","source":"巡航驱逐者"}
+403.1 "龙卷风" Ability {"id":"49C2","source":"巡航驱逐者"}
+413.7 "死刑判决" Ability {"id":"4856","source":"残暴正义号"}
+423.7 "黑暗命运 狂暴" Ability {"id":"483A","source":"巡航驱逐者"}
+
+### Transition 2: Cruise Chaser, Brute Justice and Alexander Prime
+492.0 "--同步化--" StartsUsing {"id":"485A","source":"至尊亚历山大"} window 500,0
+500.0 "时间停止" Ability {"id":"485A","source":"至尊亚历山大"}
+503.1 "誓约神判 重罚神判" Ability {"id":"4861","source":"至尊亚历山大"}
+505.1 "阿尔法之剑" #Ability { id: "486B", source: "Cruise Chaser" }
+505.2 "大火炎放射 1" #Ability { id: "486C", source: "Brute Justice" }
+506.1 "阿尔法之剑" #Ability { id: "486B", source: "Cruise Chaser" }
+507.2 "阿尔法之剑" #Ability { id: "486B", source: "Cruise Chaser" }
+507.4 "大火炎放射 2" #Ability { id: "486C", source: "Brute Justice" }
+511.4 "--可选中--"
+521.5 "神罚射线" Ability {"id":"4A80","source":"至尊亚历山大"}
+524.6 "圣炎 1" #Ability { id: "4A82", source: "Alexander Prime" }
+526.7 "圣炎 2" #Ability { id: "4A82", source: "Alexander Prime" }
+528.8 "圣炎 3" #Ability { id: "4A82", source: "Alexander Prime" }
+
+### Phase 3 Part 1 - Inception Formation
+537.9 "时空潜行阵列" Ability {"id":"486F","source":"至尊亚历山大"}
+541.0 "--无法选中--"
+552.4 "审判结晶" Ability {"id":"485B","source":"至尊亚历山大"}
+558.2 "审判结晶 + 真心" Ability {"id":"485C","source":"至尊亚历山大"}
+569.5 "大火炎放射 1" #Ability { id: "486C", source: "Brute Justice" }
+571.7 "大火炎放射 2" #Ability { id: "486C", source: "Brute Justice" }
+573.8 "大火炎放射 3" #Ability { id: "486C", source: "Brute Justice" }
+581.0 "时空潜行" Ability {"id":"485E","source":"至尊亚历山大"}
+589.1 "誓约神判, 连带神判 重罚神判" Ability {"id":"4861","source":"至尊亚历山大"}
+589.4 "圣礼" Ability {"id":"485F","source":"至尊亚历山大"}
+595.3 "阿尔法之剑" #Ability { id: "486B", source: "Cruise Chaser" }
+596.4 "阿尔法之剑" #Ability { id: "486B", source: "Cruise Chaser" }
+597.5 "阿尔法之剑" #Ability { id: "486B", source: "Cruise Chaser" }
+598.3 "超级跳跃" Ability {"id":"484A","source":"残暴正义号"}
+600.3 "--可选中--"
+610.9 "神罚射线" Ability {"id":"4A80","source":"至尊亚历山大"}
+616.0 "圣炎 1" #Ability { id: "4A82", source: "Alexander Prime" }
+618.1 "圣炎 2" #Ability { id: "4A82", source: "Alexander Prime" }
+620.2 "圣炎 3" #Ability { id: "4A82", source: "Alexander Prime" }
+
+### Phase 3 Part 2 - Wormhole Formation
+629.3 "次元断绝阵列" Ability {"id":"486E","source":"至尊亚历山大"}
+632.3 "--无法选中--"
+637.7 "限制器减档" Ability {"id":"4B0F","source":"巡航驱逐者"}
+640.7 "系统连接" Ability {"id":"483F","source":"残暴正义号"}
+643.7 "忏悔区" Ability {"id":"4866","source":"至尊亚历山大"}
+649.5 "飞轮" #Ability { id: "4855", source: "Steam Chakram" }
+650.9 "超级跳跃" Ability {"id":"484A","source":"残暴正义号"}
+650.9 "#1 阿尔法之剑" #Ability { id: "4834", source: "Cruise Chaser" }
+652.4 "#2 超级摧毁者冲击" Ability {"id":"49C3","source":"巡航驱逐者"}
+653.3 "末世宣言 x5" duration 5
+655.2 "#3 阿尔法之剑" #Ability { id: "4834", source: "Cruise Chaser" }
+655.6 "罪恶感 1" Ability {"id":"4869","source":"至尊亚历山大"}
+656.7 "#4 超级摧毁者冲击" Ability {"id":"49C3","source":"巡航驱逐者"}
+657.9 "圣礼" Ability {"id":"4857","source":"至尊亚历山大"}
+659.5 "#5 阿尔法之剑" #Ability { id: "4834", source: "Cruise Chaser" }
+659.7 "罪恶感 2" Ability {"id":"4868","source":"至尊亚历山大"}
+660.8 "#6 超级摧毁者冲击" Ability {"id":"49C3","source":"巡航驱逐者"}
+663.6 "#7 阿尔法之剑" #Ability { id: "4834", source: "Cruise Chaser" }
+664.0 "罪恶感 3" Ability {"id":"4867","source":"至尊亚历山大"}
+665.1 "#8 超级摧毁者冲击" Ability {"id":"49C3","source":"巡航驱逐者"}
+666.4 "导弹齐发" Ability {"id":"484D","source":"残暴正义号"}
+670.0 "净化射线" Ability {"id":"4A51","source":"至尊亚历山大"}
+674.2 "--可选中--"
+674.6 "计数" Ability {"id":"4850","source":"残暴正义号"}
+682.9 "百万神圣" Ability {"id":"4A83","source":"至尊亚历山大"}
+690.0 "百万神圣" Ability {"id":"4A83","source":"至尊亚历山大"}
+
+### Transition 3: DPS Checks
+699.4 "召唤亚历山大" Ability {"id":"4A55","source":"至尊亚历山大"}
+705.6 "--亚历山大无法选中--"
+705.7 "正义旋风 + 水波 x16" Ability {"id":"4876","source":"残暴正义号"} duration 50
+706.8 "--小怪可选中--"
+731.7 "黑暗命运 狂暴" Ability {"id":"4875","source":"巡航驱逐者"}
+771.9 "神圣审判 狂暴" Ability {"id":"4879","source":"至尊亚历山大"} window 67,5
+787.3 "神圣审判" Ability {"id":"487A","source":"亚历山大"}
+787.4 "击倒" duration 57
+
+### Phase 4: Perfect Alexander Part 1 - Fate Projection α
+845.4 "--可选中--"
+900.0 "--同步化--" Ability {"id":"4A8B","source":"完美亚历山大"} window 900,0
+909.1 "终审判決" Ability {"id":"487D","source":"完美亚历山大"}
+916.1 "行动命令/静止命令" Ability {"id":"487[EF]","source":"完美亚历山大"}
+926.3 "行动命令/静止命令" Ability {"id":"487[EF]","source":"完美亚历山大"}
+936.5 "制导 1" Ability {"id":"488[AB]","source":"完美亚历山大"}
+938.6 "单体/群体断罪" Ability {"id":"488[CD]","source":"完美亚历山大"}
+942.7 "制导 2" Ability {"id":"488[AB]","source":"完美亚历山大"}
+944.7 "单体/群体断罪" Ability {"id":"488[CD]","source":"完美亚历山大"}
+957.6 "未来观测 α" Ability {"id":"487B","source":"完美亚历山大"}
+### Enigma Codex Revealed Events
+966.8 "未来: 行动命令/静止命令" Ability {"id":"4B0[DE]","source":"完美亚历山大"}
+972.7 "未来: 污名神判, 连带神判 3x 重罚神判" Ability {"id":"48A4","source":"完美亚历山大"}
+974.9 "未来: 行动命令/静止命令" Ability {"id":"489[9A]","source":"完美亚历山大"}
+975.9 "未来: 圣礼 x3" duration 1.5
+982.6 "未来确定 α" Ability {"id":"487C","source":"完美亚历山大"}
+985.6 "--无法选中--"
+989.8 "行动命令/静止命令" Ability {"id":"49A[BC]","source":"完美亚历山大"}
+992.8 "污名神判, 连带神判 3x 重罚神判" Ability {"id":"4861","source":"完美亚历山大"}
+993.8 "行动命令/静止命令" Ability {"id":"49A[BC]","source":"完美亚历山大"}
+993.8 "圣礼 x3" duration 1.5
+998.8 "--可选中--"
+
+### Phase 4 Part 2 - Fate Projection β
+1008.0 "加重诛罚" Ability {"id":"4892","source":"完美亚历山大"}
+1011.1 "加重诛罚 1" #Ability { id: "4893", source: "Perfect Alexander" }
+1012.2 "加重诛罚 2" #Ability { id: "4893", source: "Perfect Alexander" }
+1013.3 "加重诛罚 3" #Ability { id: "4893", source: "Perfect Alexander" }
+1017.2 "诛罚" Ability {"id":"4891","source":"完美亚历山大"}
+1032.3 "未来观测 β" Ability {"id":"4B13","source":"完美亚历山大"}
+### Enigma Codex Revealed Events
+1047.7 "未来: 誓约神判 连带神判" #Ability { id: "489C", source: "Perfect Alexander" }
+1050.5 "未来: 正义之跃" Ability {"id":"489D","source":"完美亚历山大"}
+1056.0 "未来: 制导" Ability {"id":"48A[01]","source":"完美亚历山大"}
+1058.1 "未来: 单体/群体断罪" Ability {"id":"48A[23]","source":"完美亚历山大"}
+1061.5 "未来: 拜火圣礼" Ability {"id":"489E","source":"完美亚历山大"}
+1070.3 "未来确定 β" Ability {"id":"4B14","source":"完美亚历山大"}
+1073.3 "--无法选中--"
+1081.5 "誓约神判 连带神判" Ability {"id":"4863","source":"完美亚历山大"}
+1082.5 "正义之跃" Ability {"id":"4885","source":"完美亚历山大"}
+1086.5 "制导 1" Ability {"id":"49A[ED]","source":"完美亚历山大"}
+1088.6 "单体/群体断罪" Ability {"id":"488[CD]","source":"完美亚历山大"}
+1093.5 "拜火圣礼" Ability {"id":"4886","source":"完美亚历山大"}
+1098.5 "--可选中--"
+1106.8 "加重诛罚" Ability {"id":"4892","source":"完美亚历山大"}
+1109.9 "加重诛罚 1" #Ability { id: "4893", source: "Perfect Alexander" }
+1111.0 "加重诛罚 2" #Ability { id: "4893", source: "Perfect Alexander" }
+1112.1 "加重诛罚 3" #Ability { id: "4893", source: "Perfect Alexander" }
+1116.0 "诛罚" Ability {"id":"4891","source":"完美亚历山大"}
+
+### Phase 4 Part 3 - Almighty Judgments and Burn
+1126.2 "神圣大审判" Ability {"id":"488E","source":"完美亚历山大"}
+1130.8 "神圣大审判 生效 x3" duration 6
+1137.4 "神圣大审判 1" #Ability { id: "4890", source: "Perfect Alexander" }
+1139.4 "神圣大审判 2" #Ability { id: "4890", source: "Perfect Alexander" }
+1141.4 "神圣大审判 3" #Ability { id: "4890", source: "Perfect Alexander" }
+1142.5 "株连" Ability {"id":"4894","source":"完美亚历山大"}
+1152.6 "加重诛罚" Ability {"id":"4892","source":"完美亚历山大"}
+1155.7 "加重诛罚 1" #Ability { id: "4893", source: "Perfect Alexander" }
+1156.8 "加重诛罚 2" #Ability { id: "4893", source: "Perfect Alexander" }
+1157.9 "加重诛罚 3" #Ability { id: "4893", source: "Perfect Alexander" }
+1161.8 "诛罚" Ability {"id":"4891","source":"完美亚历山大"}
+1171.7 "神圣大审判" Ability {"id":"488E","source":"完美亚历山大"}
+1176.3 "神圣大审判 生效 x3" duration 6
+1182.9 "神圣大审判 1" #Ability { id: "4890", source: "Perfect Alexander" }
+1184.9 "神圣大审判 2" #Ability { id: "4890", source: "Perfect Alexander" }
+1186.9 "神圣大审判 3" #Ability { id: "4890", source: "Perfect Alexander" }
+1187.9 "株连" Ability {"id":"4894","source":"完美亚历山大"}
+1202.8 "时空干涉" Ability {"id":"4896","source":"完美亚历山大"}
+1216.4 "7 剩余玩家"
+1221.4 "6 剩余玩家"
+1226.4 "5 剩余玩家"
+1231.5 "4 剩余玩家"
+1236.5 "3 剩余玩家"
+1241.6 "2 剩余玩家"
+1246.6 "1 剩余玩家"
+1247.6 "时间牢狱 狂暴" Ability {"id":"4897","source":"完美亚历山大"} duration 9
+1249.8 "0 剩余玩家"
